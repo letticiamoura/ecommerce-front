@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage";
 
 export default function App() {
 
@@ -7,6 +8,8 @@ export default function App() {
     <BrowserRouter>
 
       <Routes>
+
+        <Route path="*" element={ <ErrorPage />} />
 
       </Routes>
     
