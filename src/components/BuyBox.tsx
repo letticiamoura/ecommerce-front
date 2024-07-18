@@ -1,4 +1,5 @@
 import React from 'react';
+import ProductOptions from './ProductOptions';
 
 interface BuyBoxProps {
     name: string;
@@ -8,9 +9,11 @@ interface BuyBoxProps {
     price: number;
     priceDiscount?: number;
     description: string;
+    sizes: string[];
+    colors: string[];
 }
 
-const BuyBox = ({name, reference, stars, rating, price, priceDiscount, description}: BuyBoxProps) =>{
+const BuyBox = ({name, reference, stars, rating, price, priceDiscount, description, sizes, colors}: BuyBoxProps) =>{
     return(
         <div className='pb-6'>
             <h1 className='text-[32px] font-bold text-dark-gray'>{name}</h1>
@@ -25,6 +28,10 @@ const BuyBox = ({name, reference, stars, rating, price, priceDiscount, descripti
             </div>
             <h1 className='pb-2 text-sm font-bold text-light-gray'>Descrição do produto</h1>
             <p className='text-sm font-medium text-dark-gray-2'>{description}</p>
+            <div className='pt-6'>
+                <ProductOptions options={sizes} radius="10px" shape="square" type="text" />
+                <ProductOptions options={colors} radius="10px" shape="circle" type="color" />
+            </div>
         </div>
     );
 };
