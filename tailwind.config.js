@@ -33,7 +33,16 @@ export default {
         "dark-gray": "#1F1F1F",
         "dark-gray-2": "#474747",
         "dark-gray-3": "#666666"
-      }
+      }, 
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      animation: {
+        float: 'float 3s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
