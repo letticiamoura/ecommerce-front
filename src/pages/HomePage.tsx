@@ -12,6 +12,8 @@ import nikeGreen from "../assets/nike-green.png";
 import Container from "../components/Container";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
+import "../index.css"
+
 export default function HomePage() {
 
     const data = [
