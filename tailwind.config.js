@@ -18,7 +18,9 @@ export default {
         "light-gray-3": "#F5F5F5",
         "dark-gray": "#1F1F1F",
         "dark-gray-2": "#474747",
-        "dark-gray-3": "#666666"
+        "dark-gray-3": "#666666",
+        "light-blue": "#D8E3F2",
+        "light-yellow": "#E7FF86"
       },
       backgroundColor: {
         "primary": "#C92071",
@@ -32,7 +34,9 @@ export default {
         "light-gray-3": "#F5F5F5",
         "dark-gray": "#1F1F1F",
         "dark-gray-2": "#474747",
-        "dark-gray-3": "#666666"
+        "dark-gray-3": "#666666",
+        "light-blue": "#D8E3F2",
+        "light-yellow": "#E7FF86"
       }, 
       keyframes: {
         float: {

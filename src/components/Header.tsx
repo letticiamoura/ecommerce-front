@@ -4,7 +4,7 @@ import Nav from "./Nav";
 import Menu from "./Menu";
 import Logo from "./Logo";
 
-import cart from "../assets/mini-cart.svg";
+import cart from "../assets/icons/mini-cart.svg";
 
 import Button from "./Button";
 
@@ -38,7 +38,7 @@ export default function Header() {
 
                 <Logo type="logoHeader" />
 
-                <div className="w-[35vw] hidden lg:flex items-center justify-around bg-light-gray-3 rounded-md md:block">
+                <div className="w-[35vw] hidden lg:flex items-center justify-around bg-neutral-200/80 rounded-md md:block">
                     <input 
                         id="search" 
                         type="text" 
@@ -71,10 +71,10 @@ export default function Header() {
                                         id="pesquisar" 
                                         type="text" 
                                         placeholder="Pesquisar por produto... " 
-                                        className="p-2 w-full rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
+                                        className="p-2 w-full rounded-md bg-neutral-200 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
                                     />
                                     
-                                    <CiSearch  color="#c8c8c8" className="h-auto w-6 absolute top-3 sm:top-7 left-[90vw]"/>
+                                    <CiSearch  color="#c8c8c8" className="h-auto w-8 absolute top-3 sm:top-7 left-[90vw]"/>
 
                                 </div>
                         }
