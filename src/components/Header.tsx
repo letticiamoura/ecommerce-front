@@ -8,7 +8,7 @@ import cart from "../assets/mini-cart.svg";
 
 import Button from "./Button";
 
-import { FaSearch } from "react-icons/fa";
+import { CiSearch  } from "react-icons/ci";
 
 
 export default function Header() {
@@ -45,8 +45,9 @@ export default function Header() {
                         placeholder="Pesquisar por produtos..." 
                         className="p-2 w-full outline-none bg-transparent focus:border-pink-600 focus:ring-pink-600 focus:ring-2 rounded-md" 
                     />
-                    <FaSearch size={'18px'} color="#c8c8c8" className="absolute sm:top-7 sm:left-[60vw] md:left-[58vw] md:top-8 lg:left-[63vw] lg:top-9" />
-                    {/* <img src={search} alt="Icon Search" className="h-auto w-6 absolute sm:top-7 sm:left-[60vw] md:left-[61vw] md:top-7 lg:left-[65vw] lg:top-8"/> */}
+                    
+                    <CiSearch size={'18px'} color="#c8c8c8" className="absolute sm:top-7 sm:left-[60vw] md:left-[58vw] md:top-8 lg:left-[63vw] lg:top-9" />
+
                 </div>
 
                 <div className="md:flex md:items-center gap-5 hidden">
@@ -59,7 +60,7 @@ export default function Header() {
 
                 <div className="flex items-center justify-around gap-1">
                     
-                <FaSearch color="#c8c8c8" className="h-auto w-6 md:hidden" onClick={handleOpenSearch} />
+                <CiSearch  color="#c8c8c8" className="h-auto w-6 md:hidden" onClick={handleOpenSearch} />
 
                     <div className="flex flex-col md:hidden">
 
@@ -73,7 +74,7 @@ export default function Header() {
                                         className="p-2 w-full rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
                                     />
                                     
-                                    <FaSearch color="#c8c8c8" className="h-auto w-6 absolute top-3 sm:top-7 left-[90vw]"/>
+                                    <CiSearch  color="#c8c8c8" className="h-auto w-6 absolute top-3 sm:top-7 left-[90vw]"/>
 
                                 </div>
                         }
