@@ -13,6 +13,8 @@ import Container from "../components/Container";
 import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 import "../index.css"
+import Section from '../components/Section';
+import ProductListing from "../components/ProductListing";
 
 export default function HomePage() {
 
@@ -52,8 +54,10 @@ export default function HomePage() {
                         ))
                     }
 
-                </Swiper>
-
+                </Swiper>         
+                <Section title="Populares" link={{ text: "Show More", href: "https://redirect.link" }}>
+                    <ProductListing />
+                </Section>
             </Layout>
 
         </div>

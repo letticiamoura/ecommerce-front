@@ -5,19 +5,16 @@ import HomePage from "./pages/HomePage";
 export default function App() {
 
   return (
+      <BrowserRouter>
 
-    <BrowserRouter>
+        <Routes>
 
-      <Routes>
+          <Route path="/" element={ <HomePage />} />
+          <Route path="*" element={ <ErrorPage />} />
 
-        <Route path="/" element={ <HomePage />} />
-        <Route path="*" element={ <ErrorPage />} />
-
-      </Routes>
-    
-    </BrowserRouter>
-
-  )
+        </Routes>
+      
+      </BrowserRouter>
+  );
 
 }
-
