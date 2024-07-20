@@ -5,6 +5,8 @@ import  { Swiper, SwiperSlide } from "swiper/react";
 
 import Layout from "./Layout";
 
+import nike from "../assets/tenis.svg";
+
 import tenis from "../assets/card/tenis.svg";
 import calca from "../assets/card/calca.svg";
 import camiseta from "../assets/card/camisa.svg";
@@ -23,6 +25,7 @@ import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 
 import "../index.css"
 import PromoCard from "../components/PromoCard";
+import Button from "../components/Button";
 
 export default function HomePage() {
 
@@ -45,7 +48,7 @@ export default function HomePage() {
         {id: 4, title: "Tênis", img: tenis}
     ]
 
-    const handleOfertas = () => console.log("Ofertas");
+    const handleOfertas = () => alert("Ops, em contrução!!");
     
     return(
 
@@ -116,6 +119,24 @@ export default function HomePage() {
 
                     </div>
                 
+                </section>
+
+                <section className="bg-white">
+
+                    <div className="h-auto md:h-[50vw] lg:h-[60vh] py-5 flex flex-col md:flex-row md:justify-center md:items-center">
+
+                        <div className="h-72 w-72 bg-gradient-to-b from-gray-200 to-white rounded-full flex items-center justify-center m-auto">
+                            <img src={nike} alt="Tênis Nike" className="w-3/4 h-auto" />
+                        </div>
+
+                        <div className="pb-10 px-10 flex flex-col sm:items-center md:items-start md:w-[50vw]">
+                            <p className="text-warning font-bold text-start">Oferta especial</p>
+                            <h2 className="py-4 text-3xl font-semibold text-dark-gray-2 md:text-4xl">Air Jordan edição de <br /> <span>colecionador</span></h2>
+                            <p className="py-1 pb-5 text-md font- md:font-normal text-dark-gray-2 sm:w-[60vw] md:w-auto md:text-start">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iusto, ex corrupti corporis facere quaerat iste fugit assumenda expedita laborum.</p>
+                            <Button text="Ver oferta" onClick={handleOfertas} />
+                        </div>
+                    </div>
+
                 </section>
 
             </Layout>

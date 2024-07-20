@@ -26,7 +26,7 @@ export default function Header() {
         setOpenSearch(!openSearch)
     }
 
-    const handleEntrar = () => console.log("Login");
+    const handleEntrar = () => alert("Ops, em contrução!!");
 
     return (
 
