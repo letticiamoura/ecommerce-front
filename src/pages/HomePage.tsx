@@ -55,7 +55,7 @@ export default function HomePage() {
                     }
 
                 </Swiper>         
-                <Section title="Populares" link={{ text: "Show More", href: "https://redirect.link" }}>
+                <Section className="py-20" title="Produtos em alta" link={{ text: "Ver todos", href: "https://youtu.be/v5KwV8z36Wc?si=4vE9ATOWLbOOxh9e" }}>
                     <ProductListing />
                 </Section>
             </Layout>
