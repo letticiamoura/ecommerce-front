@@ -56,7 +56,7 @@ export default function Login() {
                     
                     </form>
 
-                    <img src={tenis} alt="Tenis" className="hidden md:block w-[40vw] md:w-[33vw]" />
+                    <img src={tenis} alt="Tenis" className="hidden md:block w-[40vw] md:w-[33vw] m-auto" />
 
                 </div>
 
