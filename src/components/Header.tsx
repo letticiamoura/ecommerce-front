@@ -9,12 +9,15 @@ import cart from "../assets/icons/mini-cart.svg";
 import Button from "./Button";
 
 import { CiSearch  } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Header() {
 
     const [ open, setOpen ] = useState(false);
     const [ openSearch, setOpenSearch ] = useState(false);
+
+    const navigate = useNavigate();
 
     const handleOpenMenu = () => {
         setOpen(!open);
@@ -26,7 +29,9 @@ export default function Header() {
         setOpenSearch(!openSearch)
     }
 
-    const handleEntrar = () => alert("Ops, em contrução!!");
+    const handleEntrar = () => {
+        navigate("/login")
+    }
 
     return (
 
