@@ -1,8 +1,6 @@
-import Logo from "./Logo";
+import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
-import twitter from "../assets/twitter.svg";
-import facebook from "../assets/facebook.svg";
-import instagram from "../assets/instagram.svg";
+import Logo from "./Logo";
 
 export default function Footer() {
     return (
@@ -13,14 +11,14 @@ export default function Footer() {
                     <Logo type="logoFooter" />
                     <p className="py-5 text-sm text-light-gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae natus quasi officia excepturi laborum amet</p>
                     <div className="py-2 flex gap-5 text-white">
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                            <img src={facebook} alt="Facebook" />
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <FaFacebook size="30px" fill="#c8c8c8" className="hover:scale-110 duration-200" />
                         </a>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                            <img src={instagram} alt="Instagram" />
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <FaInstagram size="30px" fill="#c8c8c8" className="hover:scale-110 duration-200" />
                         </a>
-                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                            <img src={twitter} alt="Twitter" />
+                        <a href="https://twitter.com/" target="_blank">
+                            <FaTwitter size="30px" fill="#c8c8c8" className="hover:scale-110 duration-200" />
                         </a>
                     </div>
                 </div>

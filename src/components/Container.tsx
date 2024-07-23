@@ -1,4 +1,4 @@
-import points from "../assets/points.svg";
+import points from "../assets/icons/points.svg";
 
 interface IContainerProps {
     img: string;
@@ -12,7 +12,7 @@ export default function Container({title, subtitle, description, img, titleText,
 
     return(
 
-        <div className="bg-light-gray-3 h-auto md:h-[70vh] flex flex-col-reverse md:flex-row md:justify-center md:items-center">
+        <div className="bg-neutral-200 h-auto md:h-[70vh] flex flex-col-reverse md:flex-row md:justify-center md:items-center">
 
             <div className="pb-10 md:w-[45vw] flex flex-col items-center md:items-start md:justify-center">
 

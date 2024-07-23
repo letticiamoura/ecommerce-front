@@ -8,7 +8,7 @@ export default function ProductPage(){
     return(
         <Layout>
         <Section className='bg-light-gray-3'>
-            <div className='flex w-full justify-between items-center px-10 pb-14'>
+            <div className='flex w-full justify-between items-center px-10 py-14'>
                 <p className='text-base text-dark-gray-2'><span className='font-bold'>Resultados para "Tênis" -</span> 389 produtos</p>
                 <FilterProduct />
             </div>

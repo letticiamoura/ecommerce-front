@@ -19,7 +19,7 @@ const testProduct: Product = {
 
 const ProductListing: React.FC = () => {
     return(
-        <div className='flex justify-center box-border flex-wrap gap-8'>
+        <div className='flex justify-center box-border flex-wrap gap-x-6 gap-y-8'>
             {/* Para teste: gera 9 cópias do testProcuts */}
             {[...Array(8)].map((_, index) => (
                 <ProductCard

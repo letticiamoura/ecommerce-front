@@ -6,7 +6,7 @@ interface LogoProps {
     type: 'logoHeader' | 'logoFooter';
 }
 
-const Logo: React.FC<LogoProps> = ({ type }) => {
+export default function Logo({ type }:LogoProps)  {
 
     const logoSrc = type === 'logoHeader' ? logoHeader : logoFooter;
 
@@ -14,11 +14,12 @@ const Logo: React.FC<LogoProps> = ({ type }) => {
 
         <div>
 
-            <Link to="/"><img src={logoSrc} alt="Logo" className='h-auto w-[40vw] md:w-[20vw]' /></Link>
+            <Link to="/">
+                <img src={logoSrc} alt="Logo" className='h-auto w-[40vw] md:w-[20vw]' />
+            </Link>
 
         </div>
         
     );
 };
 
-export default Logo;
