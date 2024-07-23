@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface FilterGroupProps {
     title: string;
@@ -13,13 +12,13 @@ const FilterGroup = ({title, inputType, options}: FilterGroupProps) => {
             {options.map((option, index) => (
                 <div className='flex align-center pb-3' key={index}>
                     <input
-                        className='w-[22px] h-[22px] accent-primary'
+                        className='w-[20px] h-[22px] accent-primary'
                         type={inputType}
                         id={option.value ?? option.text}
                         name={title}
                         value={option.value}
                     />  
-                <label className='pl-2 text-sm font-medium text-dark-gray-2' htmlFor={option.value ?? option.text}>{option.text}</label>
+                <label className='pl-2 text-[12px] font-medium text-dark-gray-2' htmlFor={option.value ?? option.text}>{option.text}</label>
                 </div>
             ))}
         </div>
