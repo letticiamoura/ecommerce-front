@@ -5,7 +5,6 @@ import { FaFacebook } from "react-icons/fa";
 import gmail from "../assets/icons/gmail.svg";
 
 import tenis from "../assets/iconLogin.svg";
-import Button from "../components/Button";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 
