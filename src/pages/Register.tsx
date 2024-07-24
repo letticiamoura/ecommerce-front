@@ -8,12 +8,12 @@ import tenis from "../assets/iconLogin.svg";
 import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 
-export default function Login() {
+export default function Register() {
 
     const navigate = useNavigate();
 
-    const handleLogin = () => navigate("/");
-    const handleRegister= () => navigate("/register");
+    const handleEntrar = () => navigate("/login");
+    const handleRegisterForm = () => navigate("/registerform");
 
     return(
 
@@ -28,21 +28,15 @@ export default function Login() {
 
                     <form className="px-5 py-10 lg:py-5 h-auto flex gap-2 flex-col justify-center bg-white w-auto  rounded-md shadow-sm m-auto">
 
-                        <h2 className="py-2 lg:py-1 md:text-start text-2xl font-bold text-center">Acesse sua conta</h2>
-                        <p className="text-sm text-dark-gray-2 text-center md:text-start">Novo cliente? Então registre-se <a className='underline decoration-solid cursor-pointer' onClick={handleRegister}>aqui</a></p>
+                        <h2 className="py-2 lg:py-1 md:text-start text-2xl font-bold text-center">Crie sua conta</h2>
+                        <p className="text-sm text-dark-gray-2 text-center md:text-start">Já possui uma conta? Entre <a className='underline decoration-solid cursor-pointer' onClick={handleEntrar}>aqui</a></p>
 
-                        <label htmlFor="login" className="py-2 font-medium md:text-sm">Login *<br />
+                        <label htmlFor="login" className="py-2 font-medium md:text-sm">Email *<br />
                             <input type="text" placeholder="Insira seu login ou email" className="py-3 px-2 rounded-md w-full bg-light-gray-3 text-lg md:py-2 md:text-sm focus:border-pink-500 focus:ring-pink-500 focus:ring-2 outline-none focus:transition-all duration-200" required />
                         </label>
-
-                        <label htmlFor="senha" className="py-2 font-medium md:text-sm">Senha *<br />
-                            <input type="text" placeholder="Insira sua senha" className="py-3 px-2 rounded-md w-full bg-light-gray-3 text-lg md:py-2 md:text-sm focus:border-pink-500 focus:ring-pink-500 focus:ring-2 outline-none focus:transition-all duration-200" required />
-                        </label>
-
-                        <a href="http://localhost:5173/login" className="underline underline-offset-4 md:text-[12px] cursor-pointer hover:scale-105 hover:text-primary transition-colors font-medium hover:px-3">Esqueci minha senha</a>
-
+                        
                         <div className="m-auto py-3">
-                            <button onClick={handleLogin} className="bg-primary hover:bg-pink-500 hover:scale-105 transition-colors text-white w-56 py-3 text-lg font-medium rounded-md md:w-[30vw] md:py-2">Acessar Conta</button>
+                            <button onClick={handleRegisterForm} className="cursor-pointer bg-primary hover:bg-pink-500 hover:scale-105 transition-colors text-white w-56 py-3 text-lg font-medium rounded-md md:w-[30vw] md:py-2">Criar conta</button>
                         </div>
 
                         <div className="md:flex md:justify-center md:gap-5">
