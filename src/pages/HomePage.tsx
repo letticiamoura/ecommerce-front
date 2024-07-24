@@ -119,9 +119,11 @@ export default function HomePage() {
 
                     </div>
                 </section>
-                <Section className="pt-14 pb-20 mx-20 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"https://youtu.be/6-8E4Nirh9s?si=nH0HPIZonFO7_pJi"}}>
+
+                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"https://youtu.be/6-8E4Nirh9s?si=nH0HPIZonFO7_pJi"}}>
                     <ProductListing />
                 </Section>      
+
                 <section className="bg-white">
                     <div className="h-auto md:h-[50vw] lg:h-[60vh] py-5 flex flex-col md:flex-row md:justify-center md:items-center">
                         <div className="h-72 w-72 bg-gradient-to-b from-gray-200 to-white rounded-full flex items-center justify-center m-auto">

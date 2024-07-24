@@ -1,36 +1,36 @@
-import React from 'react';
+import { MdArrowRightAlt } from "react-icons/md";
 
-interface LinkProps{
-    text: string;
-    href: string;
-}
-
-interface SectionProps{
+interface ISectionProps{
     className?: string;
     title?: string;
     titleAlign?: 'left' | 'center';
-    link?: LinkProps;
+    link?: {
+        text: string,
+        href: string
+    };
     children: React.ReactNode;
 }
 
-const Section = ({className, title, titleAlign = 'left', link, children}: SectionProps) => {
+const Section = ({className, title, titleAlign = 'left', link, children}: ISectionProps) => {
     return(
         <section className={className}>
              {(title || link) && (
-                <div className={`flex ${titleAlign === 'center' ? 'justify-center' : 'justify-between'} pb-7`}>
+                <div className={`flex px-16 ${titleAlign === 'center' ? 'justify-center' : 'justify-between'} pb-2`}>
                     {title && (
-                        <h2 className='flex justify-end font-bold text-dark-gray-2 text-2xl'>
+                        <h2 className='flex justify-end font-bold text-dark-gray-2 text-xl'>
                             {title}
                         </h2>
                     )}
                     {link && (
                         <a 
-                            className='text-lg text-primary tracking-wider hover:text-light-gray'
+                            className='text-md font-medium text-primary tracking-wider hover:text-pink-500 hover:scale-105 transition-colors flex items-center gap-2'
                             href={link.href} 
                             target="_blank" 
                             rel="noopener noreferrer"
                         >
                             {link.text}
+                            <MdArrowRightAlt size="20px" />
+
                         </a>
                     )}
                 </div>
