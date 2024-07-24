@@ -22,9 +22,9 @@ export default function Register() {
                 <Logo type="logoHeader" />
             </header>
 
-            <main className="h-auto bg-gradient-to-b from-secondary to-[#D8E3F2] pt-8 pb-10 lg:pb-5">
+            <main className="h-auto pb-10 bg-gradient-to-b from-secondary to-[#D8E3F2] pt-8 lg:pb-5">
 
-                <div className="px-10 pb-28 flex flex-row justify-center items-center">
+                <div className="px-10 pb-10 flex flex-row justify-center items-center">
 
                     <form className="px-5 py-10 lg:py-5 h-auto flex gap-2 flex-col justify-center bg-white w-auto  rounded-md shadow-sm m-auto">
 
@@ -50,7 +50,7 @@ export default function Register() {
                     
                     </form>
 
-                    <img src={tenis} alt="Tenis" className="hidden relative top-24 md:block w-[44vw] md:w-[37vw] m-auto" />
+                    <img src={tenis} alt="Tenis" className="hidden relative top-10 md:block w-[44vw] md:w-[30vw] m-auto" />
 
                 </div>
 

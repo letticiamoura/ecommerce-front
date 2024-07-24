@@ -13,7 +13,6 @@ export default function RegisterForm() {
     const navigate = useNavigate();
 
     const handleRegister = () => navigate("/");
-    const handleEntrar = () => navigate("/login");
 
     return(
 
