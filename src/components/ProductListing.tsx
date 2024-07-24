@@ -1,6 +1,8 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 
+import nikeG from "../assets/products/nike-yellow.png";
+
 interface Product {
     category: string;
     image: string;
@@ -12,7 +14,7 @@ interface Product {
 const testProduct: Product = {
     category: "Tênis",
     name: "K-swiss V8 - Masculino",
-    image: "https://th.bing.com/th/id/OIP.rFTW9fQ72hqG5FqA1j3QbwHaHa?rs=1&pid=ImgDetMain",
+    image: nikeG,
     price: 49.9,
     priceDiscount: 20
 };
@@ -21,7 +23,7 @@ const ProductListing: React.FC = () => {
     return(
         <div className='flex justify-center box-border flex-wrap gap-x-6 gap-y-8'>
             {/* Para teste: gera 9 cópias do testProcuts */}
-            {[...Array(8)].map((_, index) => (
+            {[...Array(9)].map((_, index) => (
                 <ProductCard
                     key={index}
                     category={testProduct.category}
@@ -31,17 +33,6 @@ const ProductListing: React.FC = () => {
                     priceDiscount={testProduct.priceDiscount}
                 />
             ))}
-            {/* código original:
-                {products.map((product, index) => (
-                <ProductCard 
-                key={index} 
-                category={product.category}
-                name={product.name} 
-                image={product.image} 
-                price={product.price} 
-                priceDiscount={product.priceDiscount} 
-                />
-            ))} */}
         </div>
     );
 };
