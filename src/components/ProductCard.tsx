@@ -9,10 +9,10 @@ interface ProductCardProps {
 const ProductCard = ({ category, image, name, price, priceDiscount }: ProductCardProps) => {
   return (
 
-    <div className='w-[44vw] sm:w-[30vw] md:w-[19vw] h-fit pt-10'>
+    <div className='w-[44vw] sm:w-[30vw] md:w-[15vw] pt-10'>
 
       <div className="h-[30vh] md:h-[35vh] flex justify-center items-center bg-white">
-        <img className='h-auto w-[45vw] md:w-[17vw] object-cover pb-6 box-border -rotate-12' src={image} alt={name} />
+        <img className='h-auto w-[45vw] md:w-[20vw] object-cover pb-6 box-border -rotate-12' src={image} alt={name} />
       </div>
 
       <p className='py-1 font-bold text-xs'>{category}</p>
