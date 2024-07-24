@@ -10,7 +10,7 @@ const FilterProduct: React.FC = () => {
   };
 
   return (
-    <div className="relative inline-block w-[310px]">
+    <div className="relative inline-block w-[295px] md:w-[310px]">
       <select
         className="absolute top-0 left-0 w-full h-full opacity-0 z-10 cursor-pointer"
         value={selectedOption}

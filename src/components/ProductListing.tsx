@@ -2,8 +2,12 @@ import React from "react";
 import ProductCard from "./ProductCard";
 
 import nikeBlue from "../assets/products/nike-blue.png";
-import nikeG from "../assets/products/nike-yellow.png";
-import nikeB from "../assets/products/nike-black.png";
+import nikeG from "../assets/products/nike-black.png";
+import nikeB from "../assets/products/nike-green.png";
+
+interface IProductListingProps {
+    len: number;
+}
 
 interface Product {
     category: string;
@@ -19,11 +23,11 @@ const products: Product[] = [
     { category: "Tênis", name: "Puma - Masculino", image: nikeB, price: 50.9, priceDiscount: 20 }
 ]
 
-const ProductListing: React.FC = () => {
+export default function ProductListing({len}:IProductListingProps) {
     return(
         <div className='flex justify-center box-border flex-wrap md:w-[80vw] m-auto gap-x-6 gap-y-8'>
         
-        {Array.from({ length: 8 }).map((_, index) => {
+        {Array.from({ length: len }).map((_, index) => {
                 const product = products[index % products.length];
                 return (
                     <ProductCard
@@ -39,5 +43,3 @@ const ProductListing: React.FC = () => {
         </div>
     );
 };
-
-export default ProductListing;

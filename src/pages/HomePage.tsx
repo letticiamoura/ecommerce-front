@@ -120,8 +120,8 @@ export default function HomePage() {
                     </div>
                 </section>
 
-                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"https://youtu.be/6-8E4Nirh9s?si=nH0HPIZonFO7_pJi"}}>
-                    <ProductListing />
+                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"hhttp://localhost:5173/products"}}>
+                    <ProductListing len={8} />
                 </Section>      
 
                 <section className="bg-white">
