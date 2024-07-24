@@ -33,6 +33,10 @@ export default function Header() {
         navigate("/login")
     }
 
+    const handleRegister = () => {
+        navigate("/register")
+    }
+
     return (
 
         <header className="py-5 md:flex-col ">
@@ -57,7 +61,7 @@ export default function Header() {
 
                 <div className="md:flex md:items-center gap-5 hidden">
 
-                    <a className="lg:text-lg md:text-sm underline underline-offset-4 hover:text-primary hover:font-medium hover:transition-colors hover:scale-105 ease-out" href="https://google.com">Cadastre-se</a>
+                    <a className="lg:text-lg md:text-sm underline underline-offset-4 hover:text-primary hover:font-medium hover:transition-colors hover:scale-105 ease-out" onClick={handleRegister}>Cadastre-se</a>
 
                     <Button type="submit" text="Entrar" onClick={handleEntrar} />
 
