@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
-import HomePage from "./pages/HomePage";
 import Register from "./pages/Register";
 import RegisterForm from "./pages/RegisterForm";
 import Login from "./pages/Login";
+import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
+import OrderPage from "./pages/OrderPage";
 
 export default function App() {
 
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/registerform" element={ <RegisterForm/> } />
           <Route path="/login" element={ <Login />} />
           <Route path="/products" element={ <ProductPage />} />
+          <Route path="/myorders" element={<OrderPage />} />
           <Route path="*" element={ <ErrorPage />} />
       </Routes>
     

@@ -7,7 +7,7 @@ interface FilterGroupProps {
 
 const FilterGroup = ({title, inputType, options}: FilterGroupProps) => {
     return(
-        <div className='pb-3'>
+        <div className='pb-3 px-6 lg:px-0'>
             <h1 className="pb-3 text-sm font-bold text-dark-gray-2">{title}</h1>
             {options.map((option, index) => (
                 <div className='flex align-center pb-3' key={index}>

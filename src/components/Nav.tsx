@@ -40,12 +40,12 @@ export default function Nav({className}: IClassStyle) {
                 </NavLink>
 
                 <NavLink
-                    to="/myproducts"
+                    to="/myorders"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold underline underline-offset-8 scale-110 transition-all ' : 'text-dark-gray font-medium hover:scale-105 hover:text-primary transition-colors'
                     }
                 >
-                    Meus produtos
+                    Meus pedidos
                 </NavLink>
 
             </ul>

@@ -10,7 +10,7 @@ const FilterProduct: React.FC = () => {
   };
 
   return (
-    <div className="relative inline-block w-[310px]">
+    <div className="relative inline-block lg:w-[310px] w-max">
       <select
         className="absolute top-0 left-0 w-full h-full opacity-0 z-10 cursor-pointer"
         value={selectedOption}
@@ -22,7 +22,7 @@ const FilterProduct: React.FC = () => {
       </select>
       <div className="flex justify-normal items-center py-3 px-3 border border-dark-gray-2 rounded-sm pointer-events-none">
         <span className="pr-1 font-bold text-base text-dark-gray-2">{defaultText}</span>
-        <span className="text-base text-dark-gray-2 pr-10">{selectedOption}</span>
+        <span className="text-base text-dark-gray-2 lg:pr-10 pr-3">{selectedOption}</span>
         <FaChevronDown className="ml-auto text-dark-gray2" />
       </div>
     </div>
