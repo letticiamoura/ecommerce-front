@@ -1,7 +1,12 @@
-import React from "react";
 import ProductCard from "./ProductCard";
 
-import nikeG from "../assets/products/nike-yellow.png";
+import nikeBlue from "../assets/products/nike-blue.png";
+import nikeG from "../assets/products/nike-black.png";
+import nikeB from "../assets/products/nike-green.png";
+
+interface IProductListingProps {
+    len: number;
+}
 
 interface Product {
     category: string;
@@ -11,30 +16,29 @@ interface Product {
     priceDiscount?: number;
 }
 
-const testProduct: Product = {
-    category: "Tênis",
-    name: "K-swiss V8 - Masculino",
-    image: nikeG,
-    price: 49.9,
-    priceDiscount: 20
-};
+const products: Product[] = [
+    { category: "Tênis", name: "K-swiss V8 - Masculino", image: nikeG, price: 49.9, priceDiscount: 20 },
+    { category: "Tênis", name: "Nike - Feminino", image: nikeBlue, price: 50.9, priceDiscount: 20 },
+    { category: "Tênis", name: "Puma - Masculino", image: nikeB, price: 50.9, priceDiscount: 20 }
+]
 
-const ProductListing: React.FC = () => {
+export default function ProductListing({len}:IProductListingProps) {
     return(
-        <div className='flex justify-center box-border flex-wrap gap-x-6 gap-y-8'>
-            {/* Para teste: gera 9 cópias do testProcuts */}
-            {[...Array(9)].map((_, index) => (
-                <ProductCard
-                    key={index}
-                    category={testProduct.category}
-                    name={testProduct.name}
-                    image={testProduct.image}
-                    price={testProduct.price}
-                    priceDiscount={testProduct.priceDiscount}
-                />
-            ))}
+        <div className='flex justify-center box-border flex-wrap md:w-[80vw] m-auto gap-x-6 gap-y-8'>
+        
+        {Array.from({ length: len }).map((_, index) => {
+                const product = products[index % products.length];
+                return (
+                    <ProductCard
+                        key={index}
+                        category={product.category}
+                        name={product.name}
+                        image={product.image}
+                        price={product.price}
+                        priceDiscount={product.priceDiscount}
+                    />
+                );
+            })}
         </div>
     );
 };
-
-export default ProductListing;

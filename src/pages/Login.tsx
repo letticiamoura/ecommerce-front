@@ -32,11 +32,11 @@ export default function Login() {
                         <p className="text-sm text-dark-gray-2 text-center md:text-start">Novo cliente? Então registre-se <a className='underline decoration-solid cursor-pointer' onClick={handleRegister}>aqui</a></p>
 
                         <label htmlFor="login" className="py-2 font-medium md:text-sm">Login *<br />
-                            <input type="text" placeholder="Insira seu login ou email" className="py-3 px-2 rounded-md w-full bg-light-gray-3 text-lg md:py-2 md:text-sm focus:border-pink-500 focus:ring-pink-500 focus:ring-2 outline-none focus:transition-all duration-200" required />
+                            <input type="text" placeholder="Insira seu login ou email" className="mt-3 py-3 px-2 rounded-md w-full bg-light-gray-3 text-lg md:py-2 md:text-sm focus:border-pink-500 focus:ring-pink-500 focus:ring-2 outline-none focus:transition-all duration-200" required />
                         </label>
 
                         <label htmlFor="senha" className="py-2 font-medium md:text-sm">Senha *<br />
-                            <input type="text" placeholder="Insira sua senha" className="py-3 px-2 rounded-md w-full bg-light-gray-3 text-lg md:py-2 md:text-sm focus:border-pink-500 focus:ring-pink-500 focus:ring-2 outline-none focus:transition-all duration-200" required />
+                            <input type="text" placeholder="Insira sua senha" className="mt-3 py-3 px-2 rounded-md w-full bg-light-gray-3 text-lg md:py-2 md:text-sm focus:border-pink-500 focus:ring-pink-500 focus:ring-2 outline-none focus:transition-all duration-200" required />
                         </label>
 
                         <a href="http://localhost:5173/login" className="underline underline-offset-4 md:text-[12px] cursor-pointer hover:scale-105 hover:text-primary transition-colors font-medium hover:px-3">Esqueci minha senha</a>

@@ -1,4 +1,3 @@
-import React from 'react';
 import ProductOptions from './ProductOptions';
 
 interface BuyBoxProps {

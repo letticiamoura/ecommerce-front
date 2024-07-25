@@ -41,7 +41,7 @@ export default function OrderCard() {
                             <h1 className="text-dark-gray text-sm font-bold">{product.title}</h1>
                         </span>
                     </div>
-                    <span className="flex w-full justify-between pt-5">
+                    <span className="flex w-full lg:w-auto justify-between pt-5">
                         <h1 className="block lg:hidden font-medium font-sm text-dark-gray-2">STATUS</h1>
                         <p      
                             className={`font-bold text-sm ${product.progress === 'Produto em trânsito' ? 'text-warning' : product.progress === 'Finalizado' ? 'text-gray-500' : product.progress === 'Cancelado' ? 'text-error' : ''}`}

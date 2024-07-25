@@ -24,8 +24,8 @@ export default function RegisterForm() {
             <main className="h-auto bg-light-gray-3 pt-16 lg:pb-32">
 
                 <div className="px-10 pb-3 flex flex-col justify-center items-center">
-                    <h1 className="lg:pb-5 md:text-start pr-96 text-2xl font-bold">Crie sua conta</h1>
-                    <form className="px-5 py-10 lg:py-5 h-auto flex gap-2 flex-col justify-center bg-white w-[43%] rounded-md shadow-sm m-auto">
+                    <h1 className="pb-5 md:text-start lg:pr-96 text-2xl font-bold">Crie sua conta</h1>
+                    <form className="px-5 py-10 lg:py-5 h-auto flex gap-2 flex-col justify-center bg-white lg:w-[43%] rounded-md shadow-sm m-auto">
                         <h1 className="text-sm font-bold text-dark-gray-2">Informações Pessoais</h1>
                         <hr className='w-[248px] my-3 bg-light-gray-2'></hr>    
                         <label htmlFor="login" className="py-2 font-medium md:text-sm">Nome Completo *<br />
@@ -44,7 +44,7 @@ export default function RegisterForm() {
                 </div>
 
                 <div className="px-10 flex flex-col justify-center items-center">
-                    <form className="px-5 py-10 lg:py-5 h-auto flex gap-2 flex-col justify-center bg-white w-[43%] rounded-md shadow-sm m-auto">
+                    <form className="px-5 py-10 lg:py-5 h-auto flex gap-2 flex-col justify-center bg-white lg:w-[43%] rounded-md shadow-sm m-auto">
                         <h1 className="text-sm font-bold text-dark-gray-2">Informações de Entrega</h1>
                         <hr className='w-[248px] my-3 bg-light-gray-2'></hr>    
                         <label htmlFor="login" className="py-2 font-medium md:text-sm">Endereço *<br />
@@ -65,9 +65,9 @@ export default function RegisterForm() {
                     </form>
                     <div className="flex justify-center items-center m-auto py-5">
                         <input className="w-[22px] h-[22px] accent-primary" type="checkbox"/>  
-                        <p className="pl-3 w-6/12">Quero receber por email ofertas e novidades das lojas da Digital Store. A frequência de envios pode variar de acordo com a interação do cliente.</p>
+                        <p className="pl-3 lg:w-6/12">Quero receber por email ofertas e novidades das lojas da Digital Store. A frequência de envios pode variar de acordo com a interação do cliente.</p>
                     </div>
-                    <div className="m-auto pt-5">
+                    <div className="m-auto pt-5 pb-24 lg:pb-0">
                         <button onClick={handleRegister} className="bg-primary hover:bg-pink-500 hover:scale-105 transition-colors text-white w-56 py-3 text-lg font-medium rounded-md md:w-[40vw] md:py-2">Criar conta</button>
                     </div>
                 </div>
