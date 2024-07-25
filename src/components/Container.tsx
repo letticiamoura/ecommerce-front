@@ -12,7 +12,7 @@ export default function Container({title, subtitle, description, img, titleText,
 
     return(
 
-        <div className="bg-neutral-200 h-auto md:h-[70vh] flex flex-col-reverse md:flex-row md:justify-center md:items-center">
+        <div className="bg-neutral-200 h-auto md:h-[70vh] flex flex-col-reverse pt-10 md:flex-row md:justify-center md:items-center">
 
             <div className="pb-10 md:w-[45vw] flex flex-col items-center md:items-start md:justify-center">
 

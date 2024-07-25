@@ -13,7 +13,7 @@ export default function ProductPage() {
 
     return (
         <Layout>
-            <Section className="bg-light-gray-3">
+            <Section className="bg-light-gray-3 pt-20 md:pt-0">
                 <div className="flex flex-col-reverse md:flex-row w-full justify-between items-center px-10 py-5 md:py-14">
                     <p className="text-base text-dark-gray-2 py-3">
                         <span className="font-bold">Resultados para "Tênis" -</span> 389 produtos
