@@ -26,6 +26,8 @@ import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
 import "../index.css"
 import PromoCard from "../components/PromoCard";
 import Button from "../components/Button";
+import Section from "../components/Section";
+import ProductListing from "../components/ProductListing";
 
 export default function HomePage() {
 
@@ -79,7 +81,6 @@ export default function HomePage() {
                     }
 
                 </Swiper>
-
                 <section>
 
                     <div>
@@ -99,7 +100,6 @@ export default function HomePage() {
                             }
                         </div>
                     </div>
-
                     <div className="py-5 flex flex-col">
 
                         <h3 className="px-5 text-xl text-dark-gray font-bold md:text-center">Coleções em destaques</h3>
@@ -118,17 +118,17 @@ export default function HomePage() {
                         </div>
 
                     </div>
-                
                 </section>
 
+                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"hhttp://localhost:5173/products"}}>
+                    <ProductListing len={8} />
+                </Section>      
+
                 <section className="bg-white">
-
                     <div className="h-auto md:h-[50vw] lg:h-[60vh] py-5 flex flex-col md:flex-row md:justify-center md:items-center">
-
                         <div className="h-72 w-72 bg-gradient-to-b from-gray-200 to-white rounded-full flex items-center justify-center m-auto">
                             <img src={nike} alt="Tênis Nike" className="w-3/4 h-auto" />
                         </div>
-
                         <div className="pb-10 px-10 flex flex-col sm:items-center md:items-start md:w-[50vw]">
                             <p className="text-warning font-bold text-start">Oferta especial</p>
                             <h2 className="py-4 text-3xl font-semibold text-dark-gray-2 md:text-4xl">Air Jordan edição de <br /> <span>colecionador</span></h2>
@@ -136,9 +136,7 @@ export default function HomePage() {
                             <Button text="Ver oferta" onClick={handleOfertas} />
                         </div>
                     </div>
-
-                </section>
-
+                </section>      
             </Layout>
 
         </div>

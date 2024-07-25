@@ -6,7 +6,7 @@ export default function PageError() {
 
     return(
 
-        <section className="h-auto bg-light-gray-3">
+        <section className="h-screen bg-light-gray-3 pt-20 md:pt-0">
 
             <Header />
 

@@ -13,6 +13,7 @@ export default function Login() {
     const navigate = useNavigate();
 
     const handleLogin = () => navigate("/");
+    const handleRegister= () => navigate("/register");
 
     return(
 
@@ -21,14 +22,14 @@ export default function Login() {
                 <Logo type="logoHeader" />
             </header>
 
-            <main className="h-auto bg-gradient-to-r bg-secondary pt-8 pb-10 lg:pb-5">
+            <main className="h-auto bg-gradient-to-b from-secondary to-[#D8E3F2] pt-8 pb-10 lg:pb-5">
 
-                <div className="px-10 flex flex-row justify-center items-center">
+                <div className="px-10 pb-28 flex flex-row justify-center items-center">
 
                     <form className="px-5 py-10 lg:py-5 h-auto flex gap-2 flex-col justify-center bg-white w-auto  rounded-md shadow-sm m-auto">
 
                         <h2 className="py-2 lg:py-1 md:text-start text-2xl font-bold text-center">Acesse sua conta</h2>
-                        <p className="text-sm text-dark-gray-2 text-center md:text-start">Novo cliente? Então registre-se aqui</p>
+                        <p className="text-sm text-dark-gray-2 text-center md:text-start">Novo cliente? Então registre-se <a className='underline decoration-solid cursor-pointer' onClick={handleRegister}>aqui</a></p>
 
                         <label htmlFor="login" className="py-2 font-medium md:text-sm">Login *<br />
                             <input type="text" placeholder="Insira seu login ou email" className="py-3 px-2 rounded-md w-full bg-light-gray-3 text-lg md:py-2 md:text-sm focus:border-pink-500 focus:ring-pink-500 focus:ring-2 outline-none focus:transition-all duration-200" required />
@@ -55,7 +56,7 @@ export default function Login() {
                     
                     </form>
 
-                    <img src={tenis} alt="Tenis" className="hidden md:block w-[40vw] md:w-[33vw] m-auto" />
+                    <img src={tenis} alt="Tenis" className="hidden relative top-24 md:block w-[44vw] md:w-[37vw] m-auto" />
 
                 </div>
 
