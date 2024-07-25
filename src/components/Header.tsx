@@ -31,7 +31,7 @@ export default function Header() {
   };
 
   return (
-    <header className="py-5 md:flex-col bg-white fixed md:relative w-full z-50 top-0 shadow-md">
+    <header className="py-5 md:flex-col bg-white fixed md:relative w-full z-50 top-0 shadow-md md:shadow-none">
       <div className="flex justify-between items-center px-5">
         <Menu onClick={handleOpenMenu} />
         <Logo type="logoHeader" />

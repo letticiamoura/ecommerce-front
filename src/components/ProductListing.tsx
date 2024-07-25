@@ -1,4 +1,3 @@
-import React from "react";
 import ProductCard from "./ProductCard";
 
 import nikeBlue from "../assets/products/nike-blue.png";
