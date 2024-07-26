@@ -168,7 +168,7 @@ export default function ProductViewPage() {
 
                 </div>
 
-            </div>z
+            </div>
 
         </Layout>
     );
