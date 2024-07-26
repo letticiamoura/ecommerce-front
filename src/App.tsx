@@ -5,6 +5,7 @@ import Register from "./pages/Register";
 import RegisterForm from "./pages/RegisterForm";
 import Login from "./pages/Login";
 import ProductPage from "./pages/ProductPage";
+import ProductViewPage from "./pages/ProductViewPage";
 
 export default function App() {
 
@@ -13,11 +14,12 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={ <HomePage />} />
-          <Route path="/register" element={ < Register /> } />
-          <Route path="/registerform" element={ <RegisterForm/> } />
-          <Route path="/login" element={ <Login />} />
-          <Route path="/products" element={ <ProductPage />} />
           <Route path="*" element={ <ErrorPage />} />
+          <Route path="/login" element={ <Login />} />
+          <Route path="/ecommerce-front/product" element={ <ProductViewPage />} />
+          <Route path="/register" element={ < Register /> } />
+          <Route path="/products" element={ <ProductPage />} />
+          <Route path="/registerform" element={ <RegisterForm/> } />
       </Routes>
     
     </BrowserRouter>

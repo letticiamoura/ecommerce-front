@@ -81,10 +81,12 @@ export default function HomePage() {
                     }
 
                 </Swiper>
+                
                 <section>
 
                     <div>
                         <h3 className="px-5 pt-5 pb-4 lg:px-48 font-bold text-xl text-start">Coleções em destaque</h3>
+
                         <div className="pb-5 flex flex-col md:flex-row md:justify-center md:gap-5">
                             {
                                 cardPromo?.map((item) => (
@@ -100,6 +102,7 @@ export default function HomePage() {
                             }
                         </div>
                     </div>
+
                     <div className="py-5 flex flex-col">
 
                         <h3 className="px-5 text-xl text-dark-gray font-bold md:text-center">Coleções em destaques</h3>
@@ -118,6 +121,7 @@ export default function HomePage() {
                         </div>
 
                     </div>
+
                 </section>
 
                 <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"hhttp://localhost:5173/products"}}>
@@ -136,7 +140,8 @@ export default function HomePage() {
                             <Button text="Ver oferta" onClick={handleOfertas} />
                         </div>
                     </div>
-                </section>      
+                </section>    
+
             </Layout>
 
         </div>
