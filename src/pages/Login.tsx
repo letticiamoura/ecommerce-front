@@ -12,8 +12,8 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-    const handleLogin = () => navigate("/");
-    const handleRegister= () => navigate("/register");
+    const handleLogin = () => navigate("/ecommerce-front/");
+    const handleRegister= () => navigate("ecommerce-front/register");
 
     return(
 

@@ -16,7 +16,7 @@ const ProductCard = ({ category, image, name, price, priceDiscount }: ProductCar
 
   return (
 
-    <Link to="ecommerce-front/product" onClick={handleClick}>
+    <Link to="product" onClick={handleClick}>
 
         <div className='w-[40vw] sm:w-[30vw] md:w-[17vw] pt-10'>
 

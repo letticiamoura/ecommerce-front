@@ -8,8 +8,10 @@ import Button from "./Button";
 import cart from "../assets/icons/mini-cart.svg";
 
 export default function Header() {
+
   const [open, setOpen] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
+  
   const navigate = useNavigate();
 
   const handleOpenMenu = () => {
@@ -21,14 +23,9 @@ export default function Header() {
     setOpen(false);
     setOpenSearch(!openSearch);
   };
-
-  const handleEntrar = () => {
-    navigate("/login");
-  };
-
-  const handleRegister = () => {
-    navigate("/register");
-  };
+  
+  const handleEntrar = () => navigate("/ecommerce-front/login");
+  const handleRegister = () => navigate("/ecommerce-front/register")
 
   return (
     <header className="py-5 md:flex-col bg-white fixed md:relative w-full z-50 top-0 shadow-md md:shadow-none">
