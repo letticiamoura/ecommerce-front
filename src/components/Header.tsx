@@ -36,14 +36,18 @@ export default function Header() {
         <Menu onClick={handleOpenMenu} />
         <Logo type="logoHeader" />
 
-        <div className="hidden lg:flex items-center justify-around bg-neutral-200/80 rounded-md w-1/2">
-          <input
-            id="search"
-            type="text"
-            placeholder="Pesquisar por produtos..."
-            className="p-2 w-full outline-none bg-transparent focus:border-pink-600 focus:ring-pink-600 focus:ring-2 rounded-md"
-          />
-          <CiSearch size="18px" color="#c8c8c8" className="mx-2" />
+        <div className="hidden md:flex items-center justify-around bg-neutral-200/80 rounded-md w-1/2">
+          <div className="flex items-center w-full">
+            <input
+              id="search"
+              type="text"
+              placeholder="Pesquisar por produtos..."
+              className="p-2 w-full outline-none bg-transparent focus:border-pink-600 focus:ring-pink-600 focus:ring-2 rounded-md"
+            />
+            <div className="relative mx-2">
+              <CiSearch size="18px" color="#c8c8c8" className="absolute top-1/2 transform -translate-y-1/2 right-0 pointer-events-none" />
+            </div>
+          </div>
         </div>
 
         <div className="hidden md:flex md:items-center gap-5">
