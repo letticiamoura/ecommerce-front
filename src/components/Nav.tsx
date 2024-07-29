@@ -22,11 +22,14 @@ export default function Nav({className}: IClassStyle) {
                 <NavLink
                     to="/ecommerce-front/"
                     className={({ isActive }) =>
-                    isActive ? 'text-primary font-bold text-lg underline underline-offset-8 scale-110 transition-all ' : 'text-dark-gray text-lg font-medium hover:scale-105 hover:text-primary transition-colors'
+                        isActive
+                            ? 'text-primary font-bold text-lg underline underline-offset-8 scale-110 transition-all'
+                            : 'text-dark-gray text-lg font-medium hover:scale-105 hover:text-primary transition-colors'
                     }
                 >
                     Home
                 </NavLink>
+
 
                 <NavLink
                     to="/ecommerce-front/products"
