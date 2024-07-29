@@ -17,6 +17,7 @@ export default function App() {
           <Route path="/ecommerce-front/" element={ <HomePage />} />
           <Route path="*" element={ <ErrorPage />} />
           <Route path="ecommerce-front/login" element={ <Login />} />
+          <Route path="ecommerce-front/myproducts" element={ <OrderPage />} />
           <Route path="ecommerce-front/product" element={ <ProductViewPage />} />
           <Route path="ecommerce-front/product/*" element={ <ProductViewPage />} />
           <Route path="ecommerce-front/register" element={ < Register /> } />
