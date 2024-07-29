@@ -14,7 +14,7 @@ export default function Logo({ type }:LogoProps)  {
 
         <div>
 
-            <Link to="/">
+            <Link to="/ecommerce-front/">
                 <img src={logoSrc} alt="Logo" className='h-auto w-[40vw] md:w-[20vw]' />
             </Link>
 

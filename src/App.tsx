@@ -14,14 +14,14 @@ export default function App() {
       <BrowserRouter>
 
         <Routes>
-          <Route path="/" element={ <HomePage />} />
+          <Route path="/ecommerce-front/" element={ <HomePage />} />
           <Route path="*" element={ <ErrorPage />} />
-          <Route path="/login" element={ <Login />} />
-          <Route path="/myproducts" element={ <OrderPage />} />
-          <Route path="/ecommerce-front/product" element={ <ProductViewPage />} />
-          <Route path="/register" element={ < Register /> } />
-          <Route path="/products" element={ <ProductPage />} />
-          <Route path="/registerform" element={ <RegisterForm/> } />
+          <Route path="ecommerce-front/login" element={ <Login />} />
+          <Route path="ecommerce-front/product" element={ <ProductViewPage />} />
+          <Route path="ecommerce-front/product/*" element={ <ProductViewPage />} />
+          <Route path="ecommerce-front/register" element={ < Register /> } />
+          <Route path="ecommerce-front/products" element={ <ProductPage />} />
+          <Route path="ecommerce-front/register/registerform" element={ <RegisterForm/> } />
       </Routes>
     
     </BrowserRouter>

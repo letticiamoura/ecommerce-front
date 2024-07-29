@@ -6,8 +6,10 @@ export default function RegisterForm() {
 
     const navigate = useNavigate();
 
-    const handleRegister = () => navigate("/");
-
+    const handleRegister = () => {
+        navigate("/ecommerce-front/");
+        window.scrollTo(0, 0);
+    }
     return(
 
         <>

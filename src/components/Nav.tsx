@@ -8,8 +8,8 @@ export default function Nav({className}: IClassStyle) {
 
     const navigate = useNavigate();
 
-    const handleEntrar = () => navigate("/login");
-    const handleRegister = () => navigate("/register")
+    const handleEntrar = () => navigate("/ecommerce-front/login");
+    const handleRegister = () => navigate("/ecommerce-front/register")
 
     return(
 
@@ -20,7 +20,7 @@ export default function Nav({className}: IClassStyle) {
                 <p className="text-2xl font-medium text-dark-gray md:hidden">Páginas</p>
 
                 <NavLink
-                    to="/"
+                    to="/ecommerce-front/"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold text-lg underline underline-offset-8 scale-110 transition-all ' : 'text-dark-gray text-lg font-medium hover:scale-105 hover:text-primary transition-colors'
                     }
@@ -29,7 +29,7 @@ export default function Nav({className}: IClassStyle) {
                 </NavLink>
 
                 <NavLink
-                    to="/products"
+                    to="/ecommerce-front/products"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold underline text-lg underline-offset-8 scale-110 transition-all ' : 'text-dark-gray font-medium hover:scale-105 text-lg hover:text-primary transition-colors'
                     }
@@ -38,7 +38,7 @@ export default function Nav({className}: IClassStyle) {
                 </NavLink>
 
                 <NavLink
-                    to="/categorys"
+                    to="/ecommerce-front/categorys"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold underline text-lg underline-offset-8 scale-110 transition-all ' : 'text-dark-gray font-medium hover:scale-105 text-lg md:text-lg hover:text-primary transition-colors'
                     }
@@ -47,7 +47,7 @@ export default function Nav({className}: IClassStyle) {
                 </NavLink>
 
                 <NavLink
-                    to="/myproducts"
+                    to="/ecommerce-front/myproducts"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold underline text-lg underline-offset-8 scale-110 transition-all ' : 'text-dark-gray font-medium hover:scale-105 text-lg md:text-lg hover:text-primary transition-colors'
                     }
