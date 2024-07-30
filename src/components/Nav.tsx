@@ -8,8 +8,8 @@ export default function Nav({className}: IClassStyle) {
 
     const navigate = useNavigate();
 
-    const handleEntrar = () => navigate("/login");
-    const handleRegister = () => navigate("/register")
+    const handleEntrar = () => navigate("/ecommerce-front/login");
+    const handleRegister = () => navigate("/ecommerce-front/register")
 
     return(
 
@@ -27,7 +27,7 @@ export default function Nav({className}: IClassStyle) {
                 <p className="text-base font-bold text-dark-gray-2 md:hidden">Páginas</p>
 
                 <NavLink
-                    to="/"
+                    to="/ecommerce-front/"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold text-base underline underline-offset-8 scale-110 transition-all ' : 'text-dark-gray-2 text-base hover:scale-105 hover:text-primary transition-colors'
                     }
@@ -36,7 +36,7 @@ export default function Nav({className}: IClassStyle) {
                 </NavLink>
 
                 <NavLink
-                    to="/products"
+                    to="/ecommerce-front/products"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold underline text-base underline-offset-8 scale-110 transition-all ' : 'text-dark-gray-2 hover:scale-105 text-base hover:text-primary transition-colors'
                     }
@@ -45,7 +45,7 @@ export default function Nav({className}: IClassStyle) {
                 </NavLink>
 
                 <NavLink
-                    to="/categorys"
+                    to="/ecommerce-front/categorys"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold underline text-base underline-offset-8 scale-110 transition-all ' : 'text-dark-gray-2 hover:scale-105 text-base md:text-lg hover:text-primary transition-colors'
                     }

@@ -12,8 +12,8 @@ export default function Register() {
 
     const navigate = useNavigate();
 
-    const handleEntrar = () => navigate("/login");
-    const handleRegisterForm = () => navigate("/registerform");
+    const handleEntrar = () => navigate("ecommerce-front/login");
+    const handleRegisterForm = () => navigate("registerform");
 
     return(
 

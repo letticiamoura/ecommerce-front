@@ -1,6 +1,7 @@
 import Layout from "./Layout";
 import OrderCard from "../components/OrderCard";
-export default function OrderPage(){
+
+export default function OrderPage() {
     return(
         <Layout>
             <div className="flex justify-center pt-24 pb-48 lg:px-20 gap-5 bg-light-gray-3">
@@ -23,5 +24,5 @@ export default function OrderPage(){
                 </div>
             </div>
         </Layout>   
-    );
+    )
 }
