@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
 
 const FilterProduct: React.FC = () => {
@@ -9,6 +9,14 @@ const FilterProduct: React.FC = () => {
     setSelectedOption(event.target.value);
   };
 
+  const options = useMemo(() => (
+    [
+      { value: 'mais relevantes', label: 'mais relevantes' },
+      { value: 'menor preço', label: 'menor preço' },
+      { value: 'maior preço', label: 'maior preço' },
+    ]
+  ), []);
+
   return (
     <div className="relative inline-block w-[295px] md:w-[310px]">
       <select
@@ -16,9 +24,11 @@ const FilterProduct: React.FC = () => {
         value={selectedOption}
         onChange={handleSelectChange}
       >
-        <option value="mais relevantes">mais relevantes</option>
-        <option value="menor preço">menor preço</option>
-        <option value="maior preço">maior preço</option>
+        {options.map(option => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
       </select>
       <div className="flex justify-normal items-center py-3 px-3 border border-dark-gray-2 rounded-sm pointer-events-none">
         <span className="pr-1 font-bold text-base text-dark-gray-2">{defaultText}</span>

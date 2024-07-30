@@ -22,8 +22,12 @@ const BuyBox = ({name, reference, stars, rating, price, priceDiscount, descripti
                 <p className='text-sm font-medium text-light-gray'>({rating} avaliações)</p>
             </div>
             <div className='flex gap-x-2 py-5 items-center h-max'>
-                <p className='text-base font-bold text-light-gray-2 line-through'>R${price}</p>
-                <p className='text-[32px] font-bold text-dark-gray-2'><span className='font-normal text-base'>R$</span>{priceDiscount}</p>
+            {priceDiscount && (
+                <p className='original-price text-base font-bold text-light-gray-2 line-through'>R${price}</p>
+            )}
+            <p className='discounted-price text-[32px] font-bold text-dark-gray-2'><span className='currency font-normal text-base'>R$</span>{priceDiscount || price}</p>
+                {/* <p className='text-base font-bold text-light-gray-2 line-through'>R${price}</p>
+                <p className='text-[32px] font-bold text-dark-gray-2'><span className='font-normal text-base'>R$</span>{priceDiscount}</p> */}
             </div>
             <h1 className='pb-2 text-sm font-bold text-light-gray'>Descrição do produto</h1>
             <p className='text-sm font-medium text-dark-gray-2'>{description}</p>

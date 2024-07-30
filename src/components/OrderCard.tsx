@@ -1,3 +1,4 @@
+import React from 'react';
 import nikeG from "../assets/products/nike-yellow.png";
 
 interface OrderCardProps {
@@ -32,8 +33,8 @@ export default function OrderCard() {
     return(
         <div>
             {testProduct.map((product, index) => (
-            <>
-                <div key={index} className="flex flex-wrap justify-between">
+            <React.Fragment key={index}>
+                <div className="flex flex-wrap justify-between">
                     <div className="flex items-center">
                         <img className="h-[58px] w-[71.18px] mr-5 box-border object-contain bg-light-blue" src={product.image} alt={product.title} />
                         <span>
@@ -44,14 +45,18 @@ export default function OrderCard() {
                     <span className="flex w-full lg:w-auto justify-between pt-5">
                         <h1 className="block lg:hidden font-medium font-sm text-dark-gray-2">STATUS</h1>
                         <p      
-                            className={`font-bold text-sm ${product.progress === 'Produto em trânsito' ? 'text-warning' : product.progress === 'Finalizado' ? 'text-gray-500' : product.progress === 'Cancelado' ? 'text-error' : ''}`}
+                            className={`font-bold text-sm ${
+                                product.progress === 'Produto em trânsito' ? 'text-warning' :
+                                product.progress === 'Finalizado' ? 'text-gray-500' :
+                                product.progress === 'Cancelado' ? 'text-error' : ''
+                            }`}
                         >
                             {product.progress}
                         </p>
                     </span>
                 </div>
                 <hr className='my-5 bg-light-gray-2'></hr> 
-            </>
+            </React.Fragment>
             ))}
             
         </div>

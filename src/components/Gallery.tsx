@@ -10,19 +10,15 @@ interface GalleryProps {
   images: { src: string }[];
 }
 
-const Gallery = ({width, height, radius, showThumbs, images}: GalleryProps) => {
+const Gallery = ({ width = '100%', height = 'auto', radius = '0', showThumbs = true, images }: GalleryProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleNext = () => {
-    if (currentIndex < images.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex < images.length - 1 ? prevIndex + 1 : prevIndex));
   };
 
   const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
   };
 
   const handleThumbClick = (index: number) => {

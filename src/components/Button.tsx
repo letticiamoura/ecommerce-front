@@ -4,7 +4,7 @@ interface IButtonProps {
     type?: "submit" | "reset" | "button";
 }
 
-export default function Button({text, type, onClick}: IButtonProps){
+export default function Button({text, type = "button", onClick}: IButtonProps){
 
     return(
 

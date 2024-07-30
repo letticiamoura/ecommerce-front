@@ -1,11 +1,10 @@
-
 interface FilterGroupProps {
     title: string;
     inputType: 'checkbox' | 'radio';
     options: { text: string; value?: string }[];
 }
 
-const FilterGroup = ({title, inputType, options}: FilterGroupProps) => {
+const FilterGroup = ({title, inputType = "checkbox", options}: FilterGroupProps) => {
     return(
         <div className='pb-3 px-6 lg:px-0'>
             <h1 className="pb-3 text-sm font-bold text-dark-gray-2">{title}</h1>
