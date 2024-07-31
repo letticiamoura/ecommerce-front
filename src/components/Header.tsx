@@ -8,10 +8,10 @@ import Button from "./Button";
 import cart from "../assets/icons/mini-cart.svg";
 
 export default function Header() {
-
   const [open, setOpen] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
-  
+  const [openCart, setOpenCart] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
 
   const handleOpenMenu = () => {
@@ -23,9 +23,23 @@ export default function Header() {
     setOpen(false);
     setOpenSearch(!openSearch);
   };
-  
+
+  const handleCart = () => setOpenCart(!openCart);
+
   const handleEntrar = () => navigate("/ecommerce-front/login");
-  const handleRegister = () => navigate("/ecommerce-front/register")
+  const handleRegister = () => navigate("/ecommerce-front/register");
+
+  const handleSearch = () => {
+    if (searchTerm.trim()) {
+      navigate(`/products?filter=${encodeURIComponent(searchTerm.trim())}`);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      handleSearch();
+    }
+  };
 
   return (
     <header className="py-5 md:flex-col bg-white fixed md:relative w-full z-50 top-0 shadow-md md:shadow-none">
@@ -39,10 +53,18 @@ export default function Header() {
               id="search"
               type="text"
               placeholder="Pesquisar por produtos..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              onKeyPress={handleKeyPress}
               className="p-2 w-full outline-none bg-transparent focus:border-pink-600 focus:ring-pink-600 focus:ring-2 rounded-md"
             />
             <div className="relative mx-2">
-              <CiSearch size="18px" color="#c8c8c8" className="absolute top-1/2 transform -translate-y-1/2 right-0 pointer-events-none" />
+              <CiSearch
+                size="18px"
+                color="#c8c8c8"
+                className="absolute top-1/2 transform -translate-y-1/2 right-0 pointer-events-none cursor-pointer"
+                onClick={handleSearch}
+              />
             </div>
           </div>
         </div>
@@ -70,13 +92,23 @@ export default function Header() {
                   id="pesquisar"
                   type="text"
                   placeholder="Pesquisar por produto..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  onKeyPress={handleKeyPress}
                   className="p-2 w-full rounded-md bg-neutral-200 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
                 />
-                <CiSearch color="#c8c8c8" className="h-auto w-8 absolute top-3 left-[90vw]" />
+                <CiSearch
+                  color="#c8c8c8"
+                  className="h-auto w-8 absolute top-3 left-[90vw] cursor-pointer"
+                  onClick={handleSearch}
+                />
               </div>
             )}
           </div>
-          <img src={cart} alt="Icon Cart" className="h-auto w-6" />
+          <img src={cart} alt="Icon Cart" className="h-auto w-6" onClick={handleCart} />
+          {openCart && (
+            <div className="bg-white w-1/2 relative z-50"></div>
+          )}
         </div>
       </div>
 
