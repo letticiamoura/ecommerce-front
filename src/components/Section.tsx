@@ -15,7 +15,7 @@ const Section = ({className, title, titleAlign = 'left', link, children}: ISecti
     return(
         <section className={className}>
              {(title || link) && (
-                <div className={`flex md:px-16 ${titleAlign === 'center' ? 'justify-center' : 'justify-between'} pb-2`}>
+                <div className={`flex  ${titleAlign === 'center' ? 'justify-center' : 'justify-between'} pb-6`}>
                     {title && (
                         <h2 className='flex justify-end font-bold text-dark-gray-2 text-xl'>
                             {title}
@@ -25,7 +25,6 @@ const Section = ({className, title, titleAlign = 'left', link, children}: ISecti
                         <a 
                             className='text-md font-medium text-primary tracking-wider hover:text-pink-500 hover:scale-105 transition-colors flex items-center gap-2'
                             href={link.href} 
-                            target="_blank" 
                             rel="noopener noreferrer"
                         >
                             {link.text}

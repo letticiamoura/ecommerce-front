@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage";
 import ProductPage from "./pages/ProductPage";
 import ProductViewPage from "./pages/ProductViewPage";
 import OrderPage from "./pages/OrderPage";
+import CartPage from './pages/CartPage';
 
 export default function App() {
 
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="*" element={ <ErrorPage />} />
           <Route path="ecommerce-front/login" element={ <Login />} />
           <Route path="ecommerce-front/myproducts" element={ <OrderPage />} />
+          <Route path="ecommerce-front/cart" element={ <CartPage />} />
           <Route path="ecommerce-front/product" element={ <ProductViewPage />} />
           <Route path="ecommerce-front/product/*" element={ <ProductViewPage />} />
           <Route path="ecommerce-front/register" element={ < Register /> } />

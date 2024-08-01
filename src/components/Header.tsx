@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import Nav from "./Nav";
 import Menu from "./Menu";
@@ -76,7 +76,7 @@ export default function Header() {
               </div>
             )}
           </div>
-          <img src={cart} alt="Icon Cart" className="h-auto w-6" />
+          <NavLink to="/ecommerce-front/cart"><img src={cart} alt="Icon Cart" className="h-auto w-6" /></NavLink>
         </div>
       </div>
 

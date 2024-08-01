@@ -5,6 +5,7 @@
     import nikeB from "../assets/products/nike-green.png";
 
     interface IProductListingProps {
+        className?: string;
         len: number;
     }
 
@@ -22,9 +23,9 @@
         { category: "Tênis", name: "Puma - Masculino", image: nikeB, price: 50.9, priceDiscount: 20 }
     ]
 
-    export default function ProductListing({len}:IProductListingProps) {
+    export default function ProductListing({className, len}:IProductListingProps) {
         return(
-            <div className='flex justify-center box-border flex-wrap md:w-[80vw] m-auto gap-x-6 gap-y-8'>
+            <div className={`flex justify-between box-border flex-wrap gap-x-6 gap-y-8 ${className}`}>
             
             {Array.from({ length: len }).map((_, index) => {
                     const product = products[index % products.length];

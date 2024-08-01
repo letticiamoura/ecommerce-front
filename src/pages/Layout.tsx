@@ -14,7 +14,7 @@ export default function Layout({children}: ILayoutProps) {
 
             <Header />
 
-            <main className="h-auto">
+            <main className="h-auto bg-light-gray-3">
                 {children}
             </main>
 

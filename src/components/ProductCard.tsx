@@ -18,7 +18,7 @@ const ProductCard = ({ category, image, name, price, priceDiscount }: ProductCar
 
     <Link to="product" onClick={handleClick}>
 
-        <div className='w-[39vw] sm:w-[30vw] md:w-[17vw] pt-10'>
+        <div className='w-[39vw] sm:w-[30vw] md:w-[17vw]'>
 
           <div className="h-[30vh] md:h-[35vh] flex justify-center items-center bg-white">
             <img className='h-auto w-[39vw] md:w-[14vw] object-cover pb-6 box-border -rotate-12' src={image} alt={name} />

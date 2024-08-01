@@ -54,7 +54,7 @@ export default function ProductPage() {
                         ]} />
                     </div>
 
-                    <ProductListing len={12} />
+                    <ProductListing className="px-5 lg:p-0" len={12} />
                 </div>
 
                 {filter && (

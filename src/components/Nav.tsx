@@ -16,11 +16,11 @@ export default function Nav({className}: IClassStyle) {
         <nav className={className}>
             <div className="pt-5">
                 <p className="text-base font-bold text-dark-gray-2 md:hidden">Olá Francisco</p>
-                <ul className="py-5 px-3 md:px-11 flex flex-col md:flex-row gap-5 md:gap-10 items-start justify-start font-thin">
+                <div className="py-5 px-3 md:hidden md:px-11 flex flex-col md:flex-row gap-5 md:gap-10 items-start justify-start font-thin">
                     <a href="" className={'text-dark-gray-2 text-base hover:scale-105 hover:text-primary transition-colors'}>Minhas Informações</a>
-                    <a href="" className={'text-dark-gray-2 text-base hover:scale-105 hover:text-primary transition-colors'}>Métodos de Pagamento</a>
-                </ul>
-                <hr className='my-5 bg-light-gray-2'></hr> 
+                    <a href="" className={'text-dark-gray-2 text-base hover:scale-105 hover:text-primary transition-colors'}>Métodos de Pagamento</a>         
+                </div>
+                <hr className='md:hidden my-5 bg-light-gray-2'></hr>
             </div>
             <ul className="py-5 px-3 md:px-11 flex flex-col md:flex-row gap-5 md:gap-10 items-start justify-start font-thin">
 
