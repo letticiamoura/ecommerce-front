@@ -68,7 +68,7 @@ export default function Footer() {
 
             <hr className="w-11/12 border-light-gray/80 my-4" />
 
-            <p className="text-light-gray-2 text-center"> &copy; Direitos Reservados</p>
+            <p className="text-light-gray-2 text-center"> &copy; 2024 Digital College</p>
 
         </footer>
         

@@ -5,8 +5,8 @@ import Register from "./pages/Register";
 import RegisterForm from "./pages/RegisterForm";
 import Login from "./pages/Login";
 import ProductPage from "./pages/ProductPage";
-import ProductViewPage from "./pages/ProductViewPage";
 import OrderPage from "./pages/OrderPage";
+import ProductViewPage from "./pages/ProductViewPage";
 
 export default function App() {
 
@@ -18,7 +18,7 @@ export default function App() {
           <Route path="*" element={ <ErrorPage />} />
           <Route path="ecommerce-front/login" element={ <Login />} />
           <Route path="ecommerce-front/myproducts" element={ <OrderPage />} />
-          <Route path="ecommerce-front/product" element={ <ProductViewPage />} />
+          <Route path="ecommerce-front/product/:id" element={ <ProductViewPage />} />
           <Route path="ecommerce-front/product/*" element={ <ProductViewPage />} />
           <Route path="ecommerce-front/register" element={ < Register /> } />
           <Route path="ecommerce-front/products" element={ <ProductPage />} />
