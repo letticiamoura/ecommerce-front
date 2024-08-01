@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
-import ProductOptions from './ProductOptions';
 
 interface BuyBoxProps {
     name: string;

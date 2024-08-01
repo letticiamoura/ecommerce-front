@@ -7,7 +7,7 @@ interface ProductOptionsProps {
     type: 'text' | 'color';
 }
 
-const ProductOptions = ({ options, radius, shape, type}: ProductOptionsProps) => {
+export default function ProductOptions({ options, radius, shape, type}: ProductOptionsProps) {
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
   
     const handleOptionClick = (option: string) => {
@@ -39,4 +39,3 @@ const ProductOptions = ({ options, radius, shape, type}: ProductOptionsProps) =>
     );
 };
 
-export default ProductOptions;
