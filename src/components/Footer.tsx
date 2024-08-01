@@ -1,11 +1,31 @@
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 import Logo from "./Logo";
+import Information from "./Information";
 
 export default function Footer() {
+
+    const card01 = [
+        {text: "Blog", link:"a"},
+        {text: "Segurança", link:"a"},
+        {text: "WishList", link:"a"},
+        {text: "Meus pedidos", link:"a"},
+        {text: "Trabalhe conosco", link:"a"},
+        {text: "Sobre Drip Store", link:"a"}
+    ]
+
+    const card02 = [
+        {text: "Camisetas", link:"a"},
+        {text: "Calças", link:"a"},
+        {text: "Bonés", link:"a"},
+        {text: "Tênis", link:"a"},
+        {text: "Headphones", link:"a"}
+    ]
+
     return (
 
         <footer className="flex flex-col items-center justify-around w-full p-2 bg-dark-gray">
+
             <div className="flex flex-col md:flex-row md:gap-20 md:items-center">
                 <div className="md:w-[25vw]">
                     <Logo type="logoFooter" />
@@ -22,33 +42,34 @@ export default function Footer() {
                         </a>
                     </div>
                 </div>
+
                 <div className="py-5 flex gap-10">
+
                     <div className="flex flex-col text-light-gray">
-                        <h6 className="font-bold text-light-gray-3">Informação</h6>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Blog</p>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Segurança</p>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Wishilist</p>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Meus pedidos</p>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Trabalhe conosco</p>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Sobre Drip Store</p>
+                        
+                        <Information title="Informação" informations={card01} />
+
                     </div>
+
                     <div className="flex flex-col text-light-gray">
-                        <h6 className="font-bold text-light-gray-3">Informação</h6>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Camisetas</p>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Calças</p>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Bonés</p>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Tênis</p>
-                        <p className="hover:text-primary hover:cursor-pointer hover:scale-105 hover:transition-colors">Headphones</p>
+                        
+                        <Information title="Informação" informations={card02} />
+
                     </div>
+
                 </div>
-                <div className="md:w-[25vw]">
-                    <h6 className="py-2 text-light-gray-3 font-bold">Contato</h6>
-                    <p className="py-2 text-light-gray">Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161</p>
-                    <p className="py-2 pb-10 md:pb-5 text-light-gray">(85) 3051-3411</p>
+
+                <div className="md:w-[25vw] md:mb-9">
+                    <h6 className="py-1 text-light-gray-3 font-bold">Contato</h6>
+                    <p className="py-1 text-light-gray">Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161</p>
+                    <p className="py-2 md:pb-5 text-light-gray">(85) 3051-3411</p>
                 </div>
             </div>
-            <div className="py-4 md:py-1 w-[80vw] md:w-[90vw] m-a border-t m-auto border-slate-100"></div>
+
+            <hr className="w-11/12 border-light-gray/80 my-4" />
+
             <p className="text-light-gray-2 text-center"> &copy; Direitos Reservados</p>
+
         </footer>
         
     );
