@@ -29,7 +29,7 @@ export default function Nav({className}: IClassStyle) {
                 <NavLink
                     to="/ecommerce-front/"
                     className={({ isActive }) =>
-                    isActive ? 'text-primary font-bold text-base underline underline-offset-8 scale-110 transition-all ' : 'text-dark-gray-2 text-base hover:scale-105 hover:text-primary transition-colors'
+                    isActive ? 'text-primary font-bold text-base underline underline-offset-8 scale-110 transition-all ' : 'text-dark-gray-2 text-base hover:scale-105 md:text-lg hover:text-primary transition-colors'
                     }
                 >
                     Home
@@ -38,7 +38,7 @@ export default function Nav({className}: IClassStyle) {
                 <NavLink
                     to="/ecommerce-front/products"
                     className={({ isActive }) =>
-                    isActive ? 'text-primary font-bold underline text-base underline-offset-8 scale-110 transition-all ' : 'text-dark-gray-2 hover:scale-105 text-base hover:text-primary transition-colors'
+                    isActive ? 'text-primary font-bold underline text-base underline-offset-8 scale-110 transition-all ' : 'text-dark-gray-2 hover:scale-105 text-base md:text-lg hover:text-primary transition-colors'
                     }
                 >
                     Produtos
