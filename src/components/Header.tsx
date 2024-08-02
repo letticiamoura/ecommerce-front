@@ -6,6 +6,8 @@ import Menu from "./Menu";
 import Logo from "./Logo";
 import Button from "./Button";
 import cart from "../assets/icons/mini-cart.svg";
+import nikeG from "../assets/products/nike-yellow.png";
+import CartCard from "./CartCard";
 
 export default function Header() {
 
@@ -26,6 +28,12 @@ export default function Header() {
   
   const handleEntrar = () => navigate("/ecommerce-front/login");
   const handleRegister = () => navigate("/ecommerce-front/register")
+
+  // Pop Up do carrinho
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const handleMouseEnter = () => setIsPopupVisible(true);
+  const handleMouseLeave = () => setIsPopupVisible(false);
 
   return (
     <header className="py-5 md:flex-col bg-white fixed md:relative w-full z-50 top-0 shadow-md md:shadow-none">
@@ -76,7 +84,29 @@ export default function Header() {
               </div>
             )}
           </div>
-          <NavLink to="/ecommerce-front/cart"><img src={cart} alt="Icon Cart" className="h-auto w-6" /></NavLink>
+          <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <NavLink to="/ecommerce-front/cart">
+              <img src={cart} alt="Icon Cart" className="h-auto w-6" />
+            </NavLink>
+            {isPopupVisible && (
+              <div className="flex flex-col absolute right-1 w-[315px] mt-1 px-5 py-8 z-50 bg-white shadow-lg">
+                <h1 className="font-bold text-base text-dark-gray-2">Meu Carrinho</h1>
+                <hr className='my-5 bg-light-gray-2'></hr>
+                <CartCard 
+                    className="flex flex-row"
+                    image={nikeG} 
+                    title="K-swiss V8 - Masculino" 
+                    quantity={2}
+                    price={219.00}
+                    total={219.00}
+                />
+                <div className="flex justify-between items-center pt-5">
+                  <a href="" className='text-sm font-medium text-dark-gray-2 underline'>Esvaziar</a>
+                  <NavLink to="/ecommerce-front/cart" className="p-2 rounded-xl bg-primary text-white hover:scale-105 hover:cursor-pointer hover:bg-pink-500 transition-colors">Ver Carrinho</NavLink>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 

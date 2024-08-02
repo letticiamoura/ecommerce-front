@@ -71,7 +71,7 @@ export default function PurchasePage() {
                     <div className="hidden lg:flex flex-col lg:w-full h-fit px-6 py-7 mt-5 mb-12 bg-white">
                         <h1 className="text-sm font-bold text-dark-gray-2">Finalizar Compra</h1>
                         <hr className='my-3 bg-light-gray-2'></hr>   
-                        <p className="flex justify-between text-sm font-bold text-dark-gray-2">Total: <span className="text-error">R$ 30.00</span></p>
+                        <p className="flex justify-between text-sm font-bold text-dark-gray-2">Total: <span className="text-error">R$ 219.00</span></p>
                         <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
                         <NavLink to="/ecommerce-front/purchasedone" className=" w-full py-2 px-2 bg-warning text-white rounded-md text-center">Realizar Pagamento</NavLink>
                     </div>
@@ -89,7 +89,7 @@ export default function PurchasePage() {
                         <p className="flex justify-between text-sm font-medium text-light-gray">Frete: <span className="text-dark-gray">R$ 0.00</span></p>
                         <p className="flex justify-between text-sm font-medium text-light-gray">Desconto: <span className="text-dark-gray">R$ 30.00</span></p>
                         <span className="mb-5 p-5 bg-[#F6AA1C]/[.15]">
-                            <p className="flex justify-between text-lg font-bold text-dark-gray-2">Total: <span>R$ 30.00</span></p>
+                            <p className="flex justify-between text-lg font-bold text-dark-gray-2">Total: <span>R$ 219.00</span></p>
                             <p className="text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
                         </span>
                     </div>
@@ -97,7 +97,7 @@ export default function PurchasePage() {
                 </div>
             </div>     
             <div className="flex lg:hidden flex-col lg:w-full h-fit px-6 py-7 mt-20 bg-white">
-                <p className="flex justify-between text-lg font-bold text-dark-gray">Total: <span className="text-error">R$ 30.00</span></p>
+                <p className="flex justify-between text-lg font-bold text-dark-gray">Total: <span className="text-error">R$ 219.00</span></p>
                 <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
                 <NavLink to="/ecommerce-front/purchasepage" className=" w-full py-2 px-2 bg-warning text-white rounded-md text-center">Realizar Pagamento</NavLink>
             </div>                           
