@@ -1,12 +1,14 @@
+import { NavLink } from "react-router-dom";
 import Layout from "./Layout";
 import CartCard from "../components/CartCard";
 import Section from "../components/Section";
 import ProductListing from "../components/ProductListing";
+import nikeG from "../assets/products/nike-yellow.png";
 
 export default function CartPage() {
     return(
         <Layout>
-        <div className="flex flex-col lg:flex-row lg:gap-4 justify-center w-full pt-14">
+        <div className="flex flex-col lg:flex-row lg:gap-4 justify-center pt-32 lg:pt-14 px-5 lg:px-0">
             <div className="lg:w-4/6">
                 <div className="px-6 py-7 bg-white">
                     <div className="flex">
@@ -17,9 +19,16 @@ export default function CartPage() {
                             <h1 className="hidden lg:block font-medium font-sm text-dark-gray-2">TOTAL</h1>
                         </span>
                     </div>
-                    <CartCard />
+                    <CartCard 
+                        image={nikeG} 
+                        title="K-swiss V8 - Masculino" 
+                        color="Vermelho" 
+                        size="42" 
+                        quantity={1} 
+                        price={50.24} 
+                        total={50.24} 
+                    />
                     <hr className='hidden lg:block mt-5 bg-light-gray-2'></hr> 
-                    
                 </div>
                 <div className="flex flex-col lg:flex-row justify-center lg:gap-9 lg:pb-7 lg:bg-white">
                     <div className="mt-3 lg:m-0 p-7 lg:p-0 bg-white">
@@ -61,13 +70,13 @@ export default function CartPage() {
                         <p className="flex justify-between text-sm font-bold text-dark-gray-2">Total: <span className="text-error">R$ 30.00</span></p>
                     </div>
                     <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
-                    <button type="submit" className="hidden lg:block w-full py-2 px-2 bg-warning text-white rounded-md">Continuar</button>
+                    <NavLink to="/ecommerce-front/purchasepage" className="hidden lg:block w-full py-2 px-2 bg-warning text-white rounded-md text-center">Continuar</NavLink>
             </div>
-            <div className="lg:hidden h-fit px-6 py-7 mt-28 bg-white">
-                    <p className="flex justify-between text-sm font-bold text-dark-gray-2">Total: <span className="text-error">R$ 30.00</span></p>
-                    <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
-                    <button type="submit" className="block lg:hidden w-full py-2 px-2 bg-warning text-white rounded-md">Continuar</button>
-            </div>
+        </div>
+        <div className="lg:hidden h-fit px-6 py-7 mt-28 bg-white">
+                <p className="flex justify-between text-sm font-bold text-dark-gray-2">Total: <span className="text-error">R$ 30.00</span></p>
+                <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
+                <NavLink to="/ecommerce-front/purchasepage" className="block lg:hidden w-full py-2 px-2 bg-warning text-white rounded-md text-center">Continuar</NavLink>
         </div>
         </Layout>
     );

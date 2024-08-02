@@ -124,7 +124,7 @@ export default function HomePage() {
 
                 </section>
 
-                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"hhttp://localhost:5173/products"}}>
+                <Section className="w-full pt-14 pb-20 px-24 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"hhttp://localhost:5173/products"}}>
                     <ProductListing len={8} />
                 </Section>      
 
