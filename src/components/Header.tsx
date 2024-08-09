@@ -1,17 +1,19 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import Nav from "./Nav";
 import Menu from "./Menu";
 import Logo from "./Logo";
 import Button from "./Button";
 import cart from "../assets/icons/mini-cart.svg";
+import nikeG from "../assets/products/nike-yellow.png";
+import CartCard from "./CardCart";
 
 export default function Header() {
+
   const [open, setOpen] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
-  const [openCart, setOpenCart] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  
   const navigate = useNavigate();
 
   const handleOpenMenu = () => {
@@ -23,23 +25,15 @@ export default function Header() {
     setOpen(false);
     setOpenSearch(!openSearch);
   };
-
-  const handleCart = () => setOpenCart(!openCart);
-
+  
   const handleEntrar = () => navigate("/ecommerce-front/login");
-  const handleRegister = () => navigate("/ecommerce-front/register");
+  const handleRegister = () => navigate("/ecommerce-front/register")
 
-  const handleSearch = () => {
-    if (searchTerm.trim()) {
-      navigate(`/products?filter=${encodeURIComponent(searchTerm.trim())}`);
-    }
-  };
+  // Pop Up do carrinho
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
-  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      handleSearch();
-    }
-  };
+  const handleMouseEnter = () => setIsPopupVisible(true);
+  const handleMouseLeave = () => setIsPopupVisible(false);
 
   return (
     <header className="py-5 md:flex-col bg-white fixed md:relative w-full z-50 top-0 shadow-md md:shadow-none">
@@ -53,18 +47,10 @@ export default function Header() {
               id="search"
               type="text"
               placeholder="Pesquisar por produtos..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              onKeyPress={handleKeyPress}
               className="p-2 w-full outline-none bg-transparent focus:border-pink-600 focus:ring-pink-600 focus:ring-2 rounded-md"
             />
             <div className="relative mx-2">
-              <CiSearch
-                size="18px"
-                color="#c8c8c8"
-                className="absolute top-1/2 transform -translate-y-1/2 right-0 pointer-events-none cursor-pointer"
-                onClick={handleSearch}
-              />
+              <CiSearch size="18px" color="#c8c8c8" className="absolute top-1/2 transform -translate-y-1/2 right-0 pointer-events-none" />
             </div>
           </div>
         </div>
@@ -92,23 +78,35 @@ export default function Header() {
                   id="pesquisar"
                   type="text"
                   placeholder="Pesquisar por produto..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  onKeyPress={handleKeyPress}
                   className="p-2 w-full rounded-md bg-neutral-200 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
                 />
-                <CiSearch
-                  color="#c8c8c8"
-                  className="h-auto w-8 absolute top-3 left-[90vw] cursor-pointer"
-                  onClick={handleSearch}
-                />
+                <CiSearch color="#c8c8c8" className="h-auto w-8 absolute top-3 left-[90vw]" />
               </div>
             )}
           </div>
-          <img src={cart} alt="Icon Cart" className="h-auto w-6" onClick={handleCart} />
-          {openCart && (
-            <div className="bg-white w-1/2 relative z-50"></div>
-          )}
+          <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <NavLink to="/ecommerce-front/cart">
+              <img src={cart} alt="Icon Cart" className="h-auto w-6" />
+            </NavLink>
+            {isPopupVisible && (
+              <div className="flex flex-col absolute right-1 w-[315px] mt-1 px-5 py-8 z-50 bg-white shadow-lg">
+                <h1 className="font-bold text-base text-dark-gray-2">Meu Carrinho</h1>
+                <hr className='my-5 bg-light-gray-2'></hr>
+                <CartCard 
+                    className="flex flex-row"
+                    image={nikeG} 
+                    title="K-swiss V8 - Masculino" 
+                    quantity={2}
+                    price={219.00}
+                    total={219.00}
+                />
+                <div className="flex justify-between items-center pt-5">
+                  <a href="" className='text-sm font-medium text-dark-gray-2 underline'>Esvaziar</a>
+                  <NavLink to="/ecommerce-front/cart" className="p-2 rounded-xl bg-primary text-white hover:scale-105 hover:cursor-pointer hover:bg-pink-500 transition-colors">Ver Carrinho</NavLink>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -119,7 +117,7 @@ export default function Header() {
             className="fixed top-[10%] inset-0 z-40 bg-black bg-opacity-50  md:hidden"
             onClick={handleOpenMenu}
           ></div>
-          <Nav className="fixed z-50 bg-white w-3/4 h-full p-5 top-[9.2%] left-0 shadow-lg md:hidden" />
+          <Nav className="fixed overflow-scroll z-50 bg-white w-3/4 h-full p-5 top-[9.2%] left-0 shadow-lg md:hidden" />
         </>
       )}
     </header>
