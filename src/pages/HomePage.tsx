@@ -3,6 +3,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import  { Swiper, SwiperSlide } from "swiper/react";
 
+import "../index.css";
+
 import Layout from "./Layout";
 
 import nike from "../assets/tenis.svg";
@@ -73,7 +75,7 @@ export default function HomePage() {
                                     onClick={handleOfertas}
                                     subtitle="Melhores ofertas personalizadas"
                                     title="Queima de"
-                                    titleText="stoque Nike"
+                                    titleText="stoque Nike 🔥"
                                     description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti ex eos hic quisquam molestias blanditiis vel, ?"
                                 />
                             </SwiperSlide>
@@ -112,7 +114,7 @@ export default function HomePage() {
                                 colecaoDestaque.map((item) => (
                                     <div key={item.id} className="py-2 flex gap-3 flex-col items-center">
                                         <div className="h-auto p-5 w-auto md:p-3 hover:cursor-pointer rounded-full bg-white shadow-sm hover:shadow-lg hover:scale-110 duration-200 transition-shadow">
-                                            <img src={item.img} alt={item.title} />
+                                            <img src={item.img} alt={item.title} className="svg" />
                                         </div>
                                         <h3 className="font-medium hover:text-primary hover:scale-105 hover:cursor-pointer">{item.title}</h3>
                                     </div>
@@ -124,7 +126,7 @@ export default function HomePage() {
 
                 </section>
 
-                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"hhttp://localhost:5173/products"}}>
+                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"http://localhost:5173/ecommerce-front/products"}}>
                     <ProductListing len={8} />
                 </Section>      
 

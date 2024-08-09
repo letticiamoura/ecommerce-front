@@ -99,7 +99,7 @@ export default function Header() {
                     total={219.00}
                 />
                 <div className="flex justify-between items-center pt-5">
-                  <a href="" className='text-sm font-medium text-dark-gray-2 underline'>Esvaziar</a>
+                  <NavLink to="/ecommerce-front/cart" className='text-sm font-medium text-dark-gray-2 underline'>Esvaziar</NavLink>
                   <NavLink to="/ecommerce-front/cart" className="p-2 rounded-xl bg-primary text-white hover:scale-105 hover:cursor-pointer hover:bg-pink-500 transition-colors">Ver Carrinho</NavLink>
                 </div>
               </div>

@@ -37,7 +37,7 @@ export default function CartCard({
     };
 
     return (
-        <div className={`${className} flex flex-col p-4 border border-light-gray-2 rounded-md`}>
+        <div className={`${className} flex flex-col justify-center p-4 md:border-none border border-light-gray-2 rounded-md`}>
             <div className="flex flex-col lg:flex-row items-start lg:items-center">
                 <img
                     className="h-[104px] w-[127px] object-contain bg-light-blue rounded-md"
