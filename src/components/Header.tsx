@@ -32,8 +32,7 @@ export default function Header() {
   // Pop Up do carrinho
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
-  const handleMouseEnter = () => setIsPopupVisible(true);
-  const handleMouseLeave = () => setIsPopupVisible(false);
+  const handleMouseEnter = () => setIsPopupVisible(!isPopupVisible);
 
   return (
     <header className="py-5 md:flex-col bg-white fixed md:relative w-full z-50 top-0 shadow-md md:shadow-none">
@@ -84,12 +83,11 @@ export default function Header() {
               </div>
             )}
           </div>
-          <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <NavLink to="/ecommerce-front/cart">
+
+          <div className="relative" onClick={handleMouseEnter}>
               <img src={cart} alt="Icon Cart" className="h-auto w-6" />
-            </NavLink>
             {isPopupVisible && (
-              <div className="flex flex-col absolute right-1 w-[315px] mt-1 px-5 py-8 z-50 bg-white shadow-lg">
+              <div className="flex flex-col absolute right-1 top-full w-[315px] mt-1 px-5 py-8 z-50 bg-white shadow-lg border border-gray-300">
                 <h1 className="font-bold text-base text-dark-gray-2">Meu Carrinho</h1>
                 <hr className='my-5 bg-light-gray-2'></hr>
                 <CartCard 
@@ -107,6 +105,7 @@ export default function Header() {
               </div>
             )}
           </div>
+
         </div>
       </div>
 
