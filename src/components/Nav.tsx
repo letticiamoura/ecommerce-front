@@ -30,7 +30,6 @@ export default function Nav({className}: IClassStyle) {
                     Home
                 </NavLink>
 
-
                 <NavLink
                     to="/ecommerce-front/products"
                     className={({ isActive }) =>
