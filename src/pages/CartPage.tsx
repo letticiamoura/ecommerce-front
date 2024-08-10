@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Layout from "./Layout";
 import Section from "../components/Section";
 import ProductListing from "../components/ProductListing";
@@ -6,6 +6,14 @@ import nikeG from "../assets/products/nike-yellow.png";
 import CartCard from "../components/CardCart";
 
 export default function CartPage() {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+        navigate("/ecommerce-front/products/");
+    }
+
     return(
         <Layout>
             <div className="flex flex-col lg:flex-row lg:gap-4 justify-center pt-32 lg:pt-14 px-5 lg:px-0 bg-light-gray-3">
@@ -57,9 +65,11 @@ export default function CartPage() {
                             </div>
                         </div>
                     </div>
-                    <Section className="hidden lg:block pt-16 pb-32" title="Produtos Relacionados" link={{text:"Ver todos", href:"http://localhost:5173/products"}}>
-                        <ProductListing len={4} />
-                    </Section> 
+                    <div onClick={handleClick}>
+                        <Section className="hidden lg:block pt-16 pb-32 px-28" title="Produtos Relacionados" link={{text:"Ver todos"}}>
+                            <ProductListing len={4} />
+                        </Section> 
+                    </div>
                 </div>
                 <div className="lg:w-1/4 h-fit px-6 py-7 mt-3 lg:m-0 bg-light-gray-3">
                         <h1 className="w-full font-bold font-sm text-dark-gray-2">RESUMO</h1>

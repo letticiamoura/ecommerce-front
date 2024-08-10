@@ -8,6 +8,7 @@ import green from "../assets/products/nike-green.png";
 import BuyBox from "../components/BuyBox";
 import Section from "../components/Section";
 import ProductListing from "../components/ProductListing";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function ProductViewPage() {
 
@@ -32,6 +33,13 @@ export default function ProductViewPage() {
         { id: 4, color: "bg-purple-500" }
     ];
 
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+        navigate("/ecommerce-front/products/");
+    }
+
     return(
             <Layout>
 
@@ -41,12 +49,14 @@ export default function ProductViewPage() {
 
                         <div>
 
-                            <h3 className="py-3 pb-5 text-md font-medium text-dark-gray-2">
-                                Home / Produtos / Tênis / Nike / <br className="md:hidden" />
-                                <span>
-                                    Tênis Nike Revolution 6 Next Nature Masculino
-                                </span>
-                            </h3>
+                            <Link to="/ecommerce-front/products/">
+                                <h3 className="py-3 pb-5 text-md font-medium text-dark-gray-2">
+                                    Home / Produtos / Tênis / Nike / <br className="md:hidden" />
+                                    <span>
+                                        Tênis Nike Revolution 6 Next Nature Masculino
+                                    </span>
+                                </h3>
+                            </Link>
                             
                             <div>
                                 
@@ -96,14 +106,16 @@ export default function ProductViewPage() {
 
                     </div>
 
-                    <Section className="w-full pt-10 pb-5 px-2 box-border" title="Produtos em alta" link=       {{text:"Ver todos", href:"hhttp://localhost:5173/products"}}>
-                        <div className="hidden md:flex">
-                            <ProductListing len={4} />
-                        </div>
-                        <div className="md:hidden">
-                            <ProductListing len={2} />
-                        </div>
-                    </Section>
+                    <div onClick={handleClick}>
+                        <Section className="w-full pt-10 pb-5 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos"}}>
+                            <div className="hidden md:flex">
+                                <ProductListing len={4} />
+                            </div>
+                            <div className="md:hidden">
+                                <ProductListing len={2} />
+                            </div>
+                        </Section>
+                    </div>
 
                 </div>
 

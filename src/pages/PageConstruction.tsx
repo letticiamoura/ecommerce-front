@@ -1,20 +1,32 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import page from "../assets/page.gif";
 import Layout from "./Layout";
+import { useEffect } from "react";
 
 export default function PageInConstruction() {
+    const navigate = useNavigate();
 
-    return(
+    const handleRedirect = () => {
+        window.scrollTo(0, 0);
+        navigate("/ecommerce-front/home/");
+    };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    return (
         <Layout>
             <div className="py-16 md:py-0 md:pb-10 pb-10 flex flex-col justify-center items-center">
                 <h1 className="text-center text-2xl py-10 md:text-3xl font-extrabold text-primary">⚠ Pagina em construção ⚠</h1>
                 <img src={page} alt="Page not found" className="object-contain lg:w-[30vw]" />
-                <Link to="/ecommerce-front/home" className="p-2 w-36 border bg-primary rounded-md text-light-gray-3 hover:scale-110 hover:bg-error hover:cursor-pointer hover:transition-colors text-center">
-                Voltar
-            </Link>
+                <button 
+                    onClick={handleRedirect}
+                    className="p-2 w-36 border bg-primary rounded-md text-light-gray-3 hover:scale-110 hover:bg-error hover:cursor-pointer hover:transition-colors text-center"
+                >
+                    Voltar
+                </button>
             </div>
         </Layout>
-        
-    )
-
+    );
 }

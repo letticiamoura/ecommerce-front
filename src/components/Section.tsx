@@ -6,7 +6,7 @@ interface ISectionProps{
     titleAlign?: 'left' | 'center';
     link?: {
         text: string,
-        href: string
+        href?: string
     };
     children: React.ReactNode;
 }
@@ -23,7 +23,7 @@ const Section = ({className, title, titleAlign = 'left', link, children}: ISecti
                     )}
                     {link && (
                         <a 
-                            className='text-md font-medium text-primary tracking-wider hover:text-pink-500 hover:scale-105 transition-colors flex items-center gap-2'
+                            className='cursor-pointer text-md font-medium text-primary tracking-wider hover:text-pink-500 hover:scale-105 transition-colors flex items-center gap-2'
                             href={link.href} 
                             target="_blank" 
                             rel="noopener noreferrer"

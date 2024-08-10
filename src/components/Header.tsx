@@ -85,7 +85,7 @@ export default function Header() {
           </div>
 
           <div className="relative" onClick={handleMouseEnter}>
-              <img src={cart} alt="Icon Cart" className="h-auto w-6" />
+              <img src={cart} alt="Icon Cart" className="h-auto w-6 cursor-pointer" />
             {isPopupVisible && (
               <div className="flex flex-col absolute right-1 top-full w-[315px] mt-1 px-5 py-8 z-50 bg-white shadow-lg border border-gray-300">
                 <h1 className="font-bold text-base text-dark-gray-2">Meu Carrinho</h1>

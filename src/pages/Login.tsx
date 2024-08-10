@@ -12,8 +12,8 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-    const handleLogin = () => navigate("/ecommerce-front/home");
-    const handleRegister= () => navigate("ecommerce-front/register");
+    const handleLogin = () => navigate("/ecommerce-front/login");
+    const handleRegister = () => navigate("/ecommerce-front/register");
 
     return(
 
@@ -39,7 +39,7 @@ export default function Login() {
                             <input type="text" placeholder="Insira sua senha" className="py-3 px-2 rounded-md w-full bg-light-gray-3 text-lg md:py-2 md:text-sm focus:border-pink-500 focus:ring-pink-500 focus:ring-2 outline-none focus:transition-all duration-200" required />
                         </label>
 
-                        <a href="http://localhost:5173/login" className="underline underline-offset-4 md:text-[12px] cursor-pointer hover:scale-105 hover:text-primary transition-colors font-medium hover:px-3">Esqueci minha senha</a>
+                        <button onClick={() => alert("Em contrução")} className="underline underline-offset-4 md:text-[12px] text-start cursor-pointer hover:scale-105 hover:text-primary transition-colors font-medium hover:px-3">Esqueci minha senha</button>
 
                         <div className="m-auto py-3">
                             <button onClick={handleLogin} className="bg-primary hover:bg-pink-500 hover:scale-105 transition-colors text-white w-56 py-3 text-lg font-medium rounded-md md:w-[30vw] md:py-2">Acessar Conta</button>

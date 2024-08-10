@@ -40,7 +40,7 @@ export default function CartCard({
         <div className={`${className} flex flex-col justify-center p-4 rounded-md`}>
             <div className="flex items-center md:items-start lg:items-center">
                 <img
-                    className="h-[104px] w-[127px] object-contain bg-light-blue rounded-md"
+                    className="h-[104px] w-[127px] cursor-pointer object-contain bg-light-blue rounded-md"
                     src={image}
                     alt={title}
                 />
