@@ -10,10 +10,10 @@ import nikeG from "../assets/products/nike-yellow.png";
 import CartCard from "./CardCart";
 
 export default function Header() {
-
   const [open, setOpen] = useState(false);
   const [openSearch, setOpenSearch] = useState(false);
-  
+  const [query, setQuery] = useState(""); 
+
   const navigate = useNavigate();
 
   const handleOpenMenu = () => {
@@ -25,11 +25,15 @@ export default function Header() {
     setOpen(false);
     setOpenSearch(!openSearch);
   };
-  
-  const handleEntrar = () => navigate("/ecommerce-front/login");
-  const handleRegister = () => navigate("/ecommerce-front/register")
 
-  // Pop Up do carrinho
+  const handleSearchSubmit = (e: any) => {
+    e.preventDefault();
+    navigate(`/ecommerce-front/products/search?filter=${query}`);
+  };
+
+  const handleEntrar = () => navigate("/ecommerce-front/login");
+  const handleRegister = () => navigate("/ecommerce-front/register");
+
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
   const handleMouseEnter = () => setIsPopupVisible(!isPopupVisible);
@@ -41,17 +45,18 @@ export default function Header() {
         <Logo type="logoHeader" />
 
         <div className="hidden md:flex items-center justify-around bg-neutral-200/80 rounded-md w-1/2">
-          <div className="flex items-center w-full">
+          <form onSubmit={handleSearchSubmit} className="flex items-center w-full">
             <input
               id="search"
               type="text"
               placeholder="Pesquisar por produtos..."
               className="p-2 w-full outline-none bg-transparent focus:border-pink-600 focus:ring-pink-600 focus:ring-2 rounded-md"
+              onChange={(e) => setQuery(e.target.value)}
             />
-            <div className="relative mx-2">
-              <CiSearch size="18px" color="#c8c8c8" className="absolute top-1/2 transform -translate-y-1/2 right-0 pointer-events-none" />
-            </div>
-          </div>
+            <button type="submit" className="relative mx-2">
+              <CiSearch size="18px" color="#c8c8c8" className="absolute top-1/2 transform -translate-y-1/2 right-0" />
+            </button>
+          </form>
         </div>
 
         <div className="hidden md:flex md:items-center gap-5">
@@ -73,19 +78,24 @@ export default function Header() {
           <div className="flex flex-col md:hidden">
             {openSearch && (
               <div className="flex w-screen absolute p-2 top-16 left-0 bg-white shadow-lg z-50">
-                <input
-                  id="pesquisar"
-                  type="text"
-                  placeholder="Pesquisar por produto..."
-                  className="p-2 w-full rounded-md bg-neutral-200 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
-                />
-                <CiSearch color="#c8c8c8" className="h-auto w-8 absolute top-3 left-[90vw]" />
+                <form onSubmit={handleSearchSubmit} className="flex w-full">
+                  <input
+                    id="pesquisar"
+                    type="text"
+                    placeholder="Pesquisar por produto..."
+                    className="p-2 w-full rounded-md bg-neutral-200 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
+                    onChange={(e) => setQuery(e.target.value)}
+                  />
+                  <button type="submit">
+                    <CiSearch color="#c8c8c8" className="h-auto w-8" />
+                  </button>
+                </form>
               </div>
             )}
           </div>
 
           <div className="relative" onClick={handleMouseEnter}>
-              <img src={cart} alt="Icon Cart" className="h-auto w-6 cursor-pointer" />
+            <img src={cart} alt="Icon Cart" className="h-auto w-6 cursor-pointer" />
             {isPopupVisible && (
               <div className="flex flex-col absolute right-1 top-full w-[315px] mt-1 px-5 py-8 z-50 bg-white shadow-lg border border-gray-300">
                 <h1 className="font-bold text-base text-dark-gray-2">Meu Carrinho</h1>
@@ -105,7 +115,6 @@ export default function Header() {
               </div>
             )}
           </div>
-
         </div>
       </div>
 

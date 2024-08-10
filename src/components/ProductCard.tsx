@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface ProductCardProps {
     category: string;
@@ -10,15 +10,16 @@ interface ProductCardProps {
 
 const ProductCard = ({ category, image, name, price, priceDiscount }: ProductCardProps) => {
 
+  const navigate = useNavigate();
+
   const handleClick = () => {
+    navigate("/ecommerce-front/myproducts")
     window.scrollTo(0, 0);
   };
 
   return (
 
-    <Link to="http://localhost:5173/ecommerce-front/product" onClick={handleClick}>
-
-        <div className='w-[39vw] sm:w-[30vw] md:w-[17vw] pt-10'>
+        <div className='w-[39vw] sm:w-[30vw] md:w-[17vw] pt-10' onClick={handleClick}>
 
           <div className="h-[30vh] md:h-[35vh] flex justify-center items-center bg-white">
             <img className='h-auto w-[39vw] md:w-[14vw] object-cover pb-6 box-border -rotate-12' src={image} alt={name} />
@@ -34,9 +35,6 @@ const ProductCard = ({ category, image, name, price, priceDiscount }: ProductCar
           </div>
 
         </div>
-
-    </Link>
-
   );
 };
 

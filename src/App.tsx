@@ -27,6 +27,7 @@ export default function App() {
           <Route path="/ecommerce-front/product/*" element={ <ProductViewPage />} />
           <Route path="/ecommerce-front/register" element={ < Register /> } />
           <Route path="/ecommerce-front/products" element={ <ProductPage />} />
+          <Route path="/ecommerce-front/products/*" element={ <ProductPage />} />
           <Route path="/ecommerce-front/register/registerform" element={ <RegisterForm/> } />
           
         </Routes>
