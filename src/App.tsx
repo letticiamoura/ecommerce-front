@@ -18,7 +18,7 @@ export default function App() {
 
         <Routes>
 
-          <Route path="/ecommerce-front/" element={ <HomePage />} />
+          <Route path="/ecommerce-front" element={ <HomePage />} />
           <Route path="/ecommerce-front/home/" element={ <HomePage />} />
           <Route path="*" element={ <ErrorPage />} />
           <Route path="/ecommerce-front/construction" element={ <PageInConstruction />} />
