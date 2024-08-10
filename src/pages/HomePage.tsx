@@ -30,6 +30,7 @@ import PromoCard from "../components/PromoCard";
 import Button from "../components/Button";
 import Section from "../components/Section";
 import ProductListing from "../components/ProductListing";
+import { useNavigate } from "react-router-dom";
 
 export default function HomePage() {
 
@@ -126,9 +127,9 @@ export default function HomePage() {
 
                 </section>
 
-                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href:"http://localhost:5173/ecommerce-front/products"}}>
+                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href: "https://letticiamoura.github.io/ecommerce-front/product"}}>
                     <ProductListing len={8} />
-                </Section>      
+                </Section>   
 
                 <section className="bg-white">
                     <div className="h-auto md:h-[50vw] lg:h-[60vh] py-5 flex flex-col md:flex-row md:justify-center md:items-center">

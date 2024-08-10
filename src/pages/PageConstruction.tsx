@@ -8,7 +8,7 @@ export default function PageInConstruction() {
 
     const handleRedirect = () => {
         window.scrollTo(0, 0);
-        navigate("/ecommerce-front/home/");
+        navigate("/home/");
     };
 
     useEffect(() => {

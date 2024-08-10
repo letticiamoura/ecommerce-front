@@ -12,7 +12,7 @@ export default function PageError() {
 
             <div className="pb-10 flex flex-col justify-center items-center">
                 <img src={error} alt="Page not found" className="object-contain lg:w-[32vw]" />
-                <Link to="/ecommerce-front/home" className="p-2 w-36 border bg-primary rounded-md text-light-gray-3 hover:scale-110 hover:bg-error hover:cursor-pointer hover:transition-colors text-center">
+                <Link to="/home" className="p-2 w-36 border bg-primary rounded-md text-light-gray-3 hover:scale-110 hover:bg-error hover:cursor-pointer hover:transition-colors text-center">
                 Voltar
                 </Link>
             </div>

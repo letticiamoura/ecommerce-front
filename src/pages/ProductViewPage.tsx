@@ -37,7 +37,7 @@ export default function ProductViewPage() {
 
     const handleClick = () => {
         window.scrollTo(0, 0);
-        navigate("/ecommerce-front/products/");
+        navigate("/products");
     }
 
     return(
@@ -49,7 +49,7 @@ export default function ProductViewPage() {
 
                         <div>
 
-                            <Link to="/ecommerce-front/products/">
+                            <Link to="/products">
                                 <h3 className="py-3 pb-5 text-md font-medium text-dark-gray-2">
                                     Home / Produtos / Tênis / Nike / <br className="md:hidden" />
                                     <span>

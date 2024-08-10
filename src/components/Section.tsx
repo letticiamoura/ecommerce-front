@@ -24,7 +24,7 @@ const Section = ({className, title, titleAlign = 'left', link, children}: ISecti
                     {link && (
                         <a 
                             className='cursor-pointer text-md font-medium text-primary tracking-wider hover:text-pink-500 hover:scale-105 transition-colors flex items-center gap-2'
-                            href={link.href} 
+                            href="https://letticiamoura.github.io/ecommerce-front/product"
                             target="_blank" 
                             rel="noopener noreferrer"
                         >

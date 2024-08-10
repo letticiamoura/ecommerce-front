@@ -11,29 +11,22 @@ import CartPage from "./pages/CartPage";
 import PageInConstruction from "./pages/PageConstruction";
 
 export default function App() {
-
   return (
-
-    <BrowserRouter>
-
-        <Routes>
-
-          <Route path="/ecommerce-front" element={ <HomePage />} />
-          <Route path="/ecommerce-front/home/" element={ <HomePage />} />
-          <Route path="*" element={ <ErrorPage />} />
-          <Route path="/ecommerce-front/construction" element={ <PageInConstruction />} />
-          <Route path="/ecommerce-front/cart" element={ <CartPage />} />
-          <Route path="/ecommerce-front/login" element={ <Login />} />
-          <Route path="/ecommerce-front/myproducts" element={ <OrderPage />} />
-          <Route path="/ecommerce-front/product/*" element={ <ProductViewPage />} />
-          <Route path="/ecommerce-front/register" element={ < Register /> } />
-          <Route path="/ecommerce-front/products" element={ <ProductPage />} />
-          <Route path="/ecommerce-front/products/*" element={ <ProductPage />} />
-          <Route path="/ecommerce-front/register/registerform" element={ <RegisterForm/> } />
-          
-        </Routes>
-
+    <BrowserRouter basename="/ecommerce-front">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="*" element={<ErrorPage />} />
+        <Route path="/construction" element={<PageInConstruction />} />
+        <Route path="/cart" element={<CartPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/myproducts" element={<OrderPage />} />
+        <Route path="/product/*" element={<ProductViewPage />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route path="/products/*" element={<ProductPage />} />
+        <Route path="/register/registerform" element={<RegisterForm />} />
+      </Routes>
     </BrowserRouter>
-
   );
 }

@@ -13,7 +13,7 @@ const ProductCard = ({ category, image, name, price, priceDiscount }: ProductCar
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/ecommerce-front/myproducts")
+    navigate("/product")
     window.scrollTo(0, 0);
   };
 

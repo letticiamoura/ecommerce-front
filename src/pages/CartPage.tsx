@@ -11,7 +11,7 @@ export default function CartPage() {
 
     const handleClick = () => {
         window.scrollTo(0, 0);
-        navigate("/ecommerce-front/products/");
+        navigate("/product");
     }
 
     return(
@@ -81,13 +81,13 @@ export default function CartPage() {
                             <p className="flex justify-between text-sm font-bold text-dark-gray-2">Total: <span className="text-error">R$ 30.00</span></p>
                         </div>
                         <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
-                        <NavLink to="/ecommerce-front/purchasepage" className="hidden lg:block w-full py-2 px-2 bg-warning text-white rounded-md text-center">Continuar</NavLink>
+                        <NavLink to="/purchasepage" className="hidden lg:block w-full py-2 px-2 bg-warning text-white rounded-md text-center">Continuar</NavLink>
                 </div>
             </div>
             <div className="lg:hidden px-6 py-7 md:mt-28 bg-light-gray-3">
                     <p className="flex justify-between text-sm font-bold text-dark-gray-2">Total: <span className="text-error">R$ 219.00</span></p>
                     <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
-                    <NavLink to="/ecommerce-front/purchasepage" className="block lg:hidden w-full py-2 px-2 bg-warning text-white rounded-md text-center">Continuar</NavLink>
+                    <NavLink to="/purchasepage" className="block lg:hidden w-full py-2 px-2 bg-warning text-white rounded-md text-center">Continuar</NavLink>
             </div>
         </Layout>
     );

@@ -28,11 +28,11 @@ export default function Header() {
 
   const handleSearchSubmit = (e: any) => {
     e.preventDefault();
-    navigate(`/ecommerce-front/products/search?filter=${query}`);
+    navigate(`/products/search?filter=${query}`);
   };
 
-  const handleEntrar = () => navigate("/ecommerce-front/login");
-  const handleRegister = () => navigate("/ecommerce-front/register");
+  const handleEntrar = () => navigate("/login");
+  const handleRegister = () => navigate("/register");
 
   const [isPopupVisible, setIsPopupVisible] = useState(false);
 
@@ -109,8 +109,8 @@ export default function Header() {
                     total={219.00}
                 />
                 <div className="flex justify-between items-center pt-5">
-                  <NavLink to="/ecommerce-front/cart" className='text-sm font-medium text-dark-gray-2 underline'>Esvaziar</NavLink>
-                  <NavLink to="/ecommerce-front/cart" className="p-2 rounded-xl bg-primary text-white hover:scale-105 hover:cursor-pointer hover:bg-pink-500 transition-colors">Ver Carrinho</NavLink>
+                  <NavLink to="/cart" className='text-sm font-medium text-dark-gray-2 underline'>Esvaziar</NavLink>
+                  <NavLink to="/cart" className="p-2 rounded-xl bg-primary text-white hover:scale-105 hover:cursor-pointer hover:bg-pink-500 transition-colors">Ver Carrinho</NavLink>
                 </div>
               </div>
             )}
