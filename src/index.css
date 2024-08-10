@@ -17,4 +17,9 @@
   .swiper-button-next::after, .swiper-button-prev::after {
     @apply text-2xl; /* Ajusta o tamanho dos ícones */
   }
+
+  .svg:hover {
+    filter: invert(42%) sepia(100%) saturate(660%) hue-rotate(300deg) brightness(95%) contrast(89%);
+  }
+
   

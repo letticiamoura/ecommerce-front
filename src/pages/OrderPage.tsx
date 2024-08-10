@@ -4,7 +4,7 @@ import OrderCard from "../components/OrderCard";
 export default function OrderPage() {
     return(
         <Layout>
-            <div className="flex justify-center pt-24 pb-48 lg:px-20 gap-5 bg-light-gray-3">
+            <div className="flex justify-center pt-28 md:pt-16 pb-10 lg:px-20 gap-5 bg-light-gray-3">
                 <div className="hidden lg:block w-full lg:w-fit h-fit p-10 bg-white">
                     <p className="text-dark-gray-2 font-bold text-sm ">Meu perfil</p>
                     <hr className='lg:w-[248px] my-5 bg-light-gray-2'></hr> 

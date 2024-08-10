@@ -6,20 +6,20 @@ import Information from "./Information";
 export default function Footer() {
 
     const card01 = [
-        {text: "Blog", link:"a"},
-        {text: "Segurança", link:"a"},
-        {text: "WishList", link:"a"},
-        {text: "Meus pedidos", link:"a"},
-        {text: "Trabalhe conosco", link:"a"},
-        {text: "Sobre Drip Store", link:"a"}
+        {text: "Blog"},
+        {text: "Segurança"},
+        {text: "WishList"},
+        {text: "Meus pedidos"},
+        {text: "Trabalhe conosco"},
+        {text: "Sobre Drip Store"}
     ]
 
     const card02 = [
-        {text: "Camisetas", link:"a"},
-        {text: "Calças", link:"a"},
-        {text: "Bonés", link:"a"},
-        {text: "Tênis", link:"a"},
-        {text: "Headphones", link:"a"}
+        {text: "Camisetas"},
+        {text: "Calças"},
+        {text: "Bonés"},
+        {text: "Tênis"},
+        {text: "Headphones"}
     ]
 
     return (

@@ -7,8 +7,14 @@ import RegisterForm from "./pages/RegisterForm";
 import Login from "./pages/Login";
 import ProductPage from "./pages/ProductPage";
 import OrderPage from "./pages/OrderPage";
+<<<<<<< HEAD
 
 const ProductViewPage = lazy(() => import("./pages/ProductViewPage"));
+=======
+import ProductViewPage from "./pages/ProductViewPage";
+import CartPage from "./pages/CartPage";
+import PageInConstruction from "./pages/PageConstruction";
+>>>>>>> leticia
 
 export default function App() {
 
@@ -19,6 +25,7 @@ export default function App() {
       <Suspense fallback={<div>Loading...</div>}>
 
         <Routes>
+<<<<<<< HEAD
           <Route path="*" element={<ErrorPage />} />
           <Route path="/ecommerce-front/" element={<HomePage />} />
           <Route path="/ecommerce-front/login" element={<Login />} />
@@ -31,6 +38,21 @@ export default function App() {
 
       </Suspense>
 
+=======
+          <Route path="/ecommerce-front/home" element={ <HomePage />} />
+          <Route path="*" element={ <ErrorPage />} />
+          <Route path="ecommerce-front/construction" element={ <PageInConstruction />} />
+          <Route path="ecommerce-front/cart" element={ <CartPage />} />
+          <Route path="ecommerce-front/login" element={ <Login />} />
+          <Route path="ecommerce-front/myproducts" element={ <OrderPage />} />
+          <Route path="ecommerce-front/product/:id" element={ <ProductViewPage />} />
+          <Route path="ecommerce-front/product/*" element={ <ProductViewPage />} />
+          <Route path="ecommerce-front/register" element={ < Register /> } />
+          <Route path="ecommerce-front/products" element={ <ProductPage />} />
+          <Route path="ecommerce-front/register/registerform" element={ <RegisterForm/> } />
+      </Routes>
+    
+>>>>>>> leticia
     </BrowserRouter>
 
   );

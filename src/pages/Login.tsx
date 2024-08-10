@@ -12,7 +12,7 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-    const handleLogin = () => navigate("/ecommerce-front/");
+    const handleLogin = () => navigate("/ecommerce-front/home");
     const handleRegister= () => navigate("ecommerce-front/register");
 
     return(

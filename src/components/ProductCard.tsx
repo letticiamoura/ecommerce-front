@@ -16,7 +16,7 @@ const ProductCard = ({ category, image, name, price, priceDiscount }: ProductCar
 
   return (
 
-    <Link to="product" onClick={handleClick}>
+    <Link to="http://localhost:5173/ecommerce-front/product" onClick={handleClick}>
 
         <div className='w-[39vw] sm:w-[30vw] md:w-[17vw] pt-10'>
 
