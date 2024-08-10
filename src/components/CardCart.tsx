@@ -37,8 +37,8 @@ export default function CartCard({
     };
 
     return (
-        <div className={`${className} flex flex-col justify-center p-4 md:border-none border border-light-gray-2 rounded-md`}>
-            <div className="flex flex-col lg:flex-row items-start lg:items-center">
+        <div className={`${className} flex flex-col justify-center p-4 rounded-md`}>
+            <div className="flex items-center md:items-start lg:items-center">
                 <img
                     className="h-[104px] w-[127px] object-contain bg-light-blue rounded-md"
                     src={image}
@@ -63,7 +63,7 @@ export default function CartCard({
                         />
                         <button className="h-8 w-8 border border-light-gray-2 rounded-sm" onClick={increaseItem}>+</button>
                     </div>
-                    <div className="flex flex-col lg:flex-row lg:justify-between w-full">
+                    <div className="flex flex-col lg:flex-row lg:justify-between w-full ">
                         <div className="mb-2 lg:mb-0">
                             <p className="text-base font-bold text-dark-gray-2">UNITÁRIO</p>
                             <p className="text-base font-bold text-dark-gray-2">R$ {price}</p>
