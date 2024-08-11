@@ -2,7 +2,7 @@
 interface FilterGroupProps {
     title?: string;
     inputType: 'checkbox' | 'radio';
-    className: string;
+    className?: string;
     options: { text: string; value?: string }[];
 }
 
