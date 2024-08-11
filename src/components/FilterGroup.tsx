@@ -2,14 +2,14 @@
 interface FilterGroupProps {
     title?: string;
     inputType: 'checkbox' | 'radio';
-    className: string
+    className: string;
     options: { text: string; value?: string }[];
 }
 
-const FilterGroup = ({title, inputType, options}: FilterGroupProps) => {
+const FilterGroup = ({title, inputType, options,className}: FilterGroupProps) => {
     return(
         <div className='pb-3'>
-            <h1 className="pb-3 text-sm font-bold text-dark-gray-2">{title}</h1>
+            <h1 className={className ? className : `pb-3 text-sm font-bold text-dark-gray-2`}>{title}</h1>
             {options.map((option, index) => (
                 <div className='flex align-center pb-3' key={index}>
                     <input
