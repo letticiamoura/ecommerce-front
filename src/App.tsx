@@ -9,13 +9,16 @@ import OrderPage from "./pages/OrderPage";
 import ProductViewPage from "./pages/ProductViewPage";
 import CartPage from "./pages/CartPage";
 import PageInConstruction from "./pages/PageConstruction";
+import PurchasePage from "./pages/PurchasePage";
+import PurchaseDonePage from "./pages/PurchaseDonePage";
 
 export default function App() {
   return (
     <BrowserRouter basename="/ecommerce-front">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/purchasepage" element={ <PurchasePage/> } />
+        <Route path="/purchasedone" element={ <PurchaseDonePage/> } />
         <Route path="*" element={<ErrorPage />} />
         <Route path="/construction" element={<PageInConstruction />} />
         <Route path="/cart" element={<CartPage />} />
