@@ -15,15 +15,15 @@ export default function App() {
     <BrowserRouter basename="/ecommerce-front">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/home" element={<HomePage />} />
+        {/* <Route path="/home" element={<HomePage />} /> */}
         <Route path="*" element={<ErrorPage />} />
         <Route path="/construction" element={<PageInConstruction />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/myproducts" element={<OrderPage />} />
         <Route path="/product/*" element={<ProductViewPage />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/products" element={<ProductPage />} />
+        <Route path="/register/" element={<Register />} />
+        <Route path="/products/" element={<ProductPage />} />
         <Route path="/products/*" element={<ProductPage />} />
         <Route path="/register/registerform" element={<RegisterForm />} />
       </Routes>

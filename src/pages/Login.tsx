@@ -12,7 +12,7 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-    const handleLogin = () => navigate("/home");
+    const handleLogin = () => navigate("/");
     const handleRegister = () => navigate("/register");
 
     return(

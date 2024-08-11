@@ -1,4 +1,5 @@
 import { MdArrowRightAlt } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 interface ISectionProps{
     className?: string;
@@ -12,6 +13,9 @@ interface ISectionProps{
 }
 
 const Section = ({className, title, titleAlign = 'left', link, children}: ISectionProps) => {
+
+    const handleClick = () => window.scrollTo(0,0);
+    
     return(
         <section className={className}>
              {(title || link) && (
@@ -22,16 +26,13 @@ const Section = ({className, title, titleAlign = 'left', link, children}: ISecti
                         </h2>
                     )}
                     {link && (
-                        <a 
-                            className='cursor-pointer text-md font-medium text-primary tracking-wider hover:text-pink-500 hover:scale-105 transition-colors flex items-center gap-2'
-                            href="https://letticiamoura.github.io/ecommerce-front/product"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                        >
-                            {link.text}
-                            <MdArrowRightAlt size="20px" />
 
-                        </a>
+                        <Link to="/products" onClick={handleClick} className='cursor-pointer text-md font-medium text-primary tracking-wider hover:text-pink-500 hover:scale-105 transition-colors flex items-center gap-2'>
+                        
+                            {link.text}
+                                <MdArrowRightAlt size="20px" />
+                        
+                        </Link>
                     )}
                 </div>
             )}
