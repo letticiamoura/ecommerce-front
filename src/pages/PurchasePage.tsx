@@ -8,10 +8,10 @@ export default function PurchasePage() {
 
     return(
         <Layout>
-            <div className="flex flex-col lg:flex-row lg:gap-4 justify-center pt-32 lg:pt-14 px-5 lg:px-0">
+            <div className="flex flex-col lg:flex-row lg:gap-4 justify-center pt-28 lg:pt-14 px-5 lg:px-0">
                 <div className="lg:w-[60%]">
                     <div>
-                        <h1 className="pb-6 md:text-start text-2xl font-bold">Finalizar Compra</h1>
+                        <h1 className="pb-3 md:text-start text-2xl font-bold">Finalizar Compra</h1>
                         <form className="px-5 py-10 lg:py-5 h-auto flex gap-2 flex-col justify-center bg-white rounded-md shadow-sm m-auto">
                             <h1 className="text-sm font-bold text-dark-gray-2">Informações Pessoais</h1>
                             <hr className=' my-3 bg-light-gray-2'></hr>    
@@ -97,7 +97,7 @@ export default function PurchasePage() {
                     <NavLink to="/purchasedone" className="flex justify-center w-full py-2 px-2 bg-warning text-white rounded-md text-center">Realizar Pagamento</NavLink>
                 </div>
             </div>     
-            <div className="flex lg:hidden flex-col lg:w-full h-fit px-6 py-7 mt-20 bg-white">
+            <div className="flex lg:hidden flex-col lg:w-full h-fit px-6 py-3 mt-10 bg-white">
                 <p className="flex justify-between text-lg font-bold text-dark-gray">Total: <span className="text-error">R$ 219.00</span></p>
                 <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
                 <NavLink to="/purchasepage" className=" w-full py-2 px-2 bg-warning text-white rounded-md text-center">Realizar Pagamento</NavLink>

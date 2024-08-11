@@ -10,10 +10,10 @@ export default function PurchaseDonePage() {
 
     return(
         <Layout>
-            <div className="flex flex-col lg:flex-row justify-center pt-32 lg:pt-14 px-5 lg:px-0">
+            <div className="flex flex-col lg:flex-row bg-light-gray-3 justify-center items-center pt-32 lg:pt-14 px-5 lg:px-0">
                 <div className="lg:w-[60%]">
                     <div>
-                        <div className="px-5 pt-10 h-auto flex gap-2 flex-col justify-center bg-white rounded-md shadow-sm m-auto">
+                        <div className="px-5 pt-10 h-auto flex gap-2 flex-col justify-center items-center bg-white rounded-md shadow-sm m-auto">
                             <h1 className="pb-6 text-center text-3xl font-bold text-dark-gray"><span className="flex justify-center pb-3"><img src={nikeG} alt="confetti emoji" className="h-[74px]" /></span>Compra Realizada<br/> com sucesso!</h1>
                             <hr className=' my-3 bg-light-gray-2'></hr>  
                             <h1 className="text-sm font-bold text-dark-gray-2">Informações Pessoais</h1>  
@@ -22,7 +22,7 @@ export default function PurchaseDonePage() {
                             <p className="font-medium text-sm text-drak-gray"><span className="text-light-gray">Email: </span>Francisco@gmail.com</p>
                             <p className="font-medium text-sm text-drak-gray"><span className="text-light-gray">Celular: </span>&#40;85&#41; 99294-2345</p>
                         </div>
-                        <div className="px-5 h-auto flex gap-2 flex-col justify-center bg-white rounded-md shadow-sm m-auto">
+                        <div className="px-5 h-auto flex gap-2 flex-col justify-center items-center bg-white rounded-md shadow-sm m-auto">
                             <hr className=' my-3 bg-light-gray-2'></hr>  
                             <h1 className="text-sm font-bold text-dark-gray-2">Informações de Entrega</h1>  
                             <p className="font-medium text-sm text-drak-gray"><span className="text-light-gray">Endereço: </span>Rua ABC, 33</p>
@@ -30,7 +30,7 @@ export default function PurchaseDonePage() {
                             <p className="font-medium text-sm text-drak-gray"><span className="text-light-gray">Cidade: </span>Fortaleza, Ceará</p>
                             <p className="font-medium text-sm text-drak-gray"><span className="text-light-gray">CEP: </span>63900-000</p>
                         </div>
-                        <div className="px-5 pb-10 h-auto flex gap-2 flex-col justify-center bg-white rounded-md shadow-sm m-auto">
+                        <div className="px-5 pb-10 h-auto flex gap-2 flex-col justify-center items-center bg-white rounded-md shadow-sm m-auto">
                             <hr className=' my-3 bg-light-gray-2'></hr>  
                             <h1 className="text-sm font-bold text-dark-gray-2 pb-2">Resumo da Compra</h1>  
                             <CartCard 
