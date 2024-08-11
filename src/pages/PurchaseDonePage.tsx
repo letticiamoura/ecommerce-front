@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Layout from "./Layout";
 import CartCard from "../components/CardCart";
-// import confetti from "../assets/confetti.png";
+import confetti from "../assets/confetti.png";
 import nikeG from "../assets/products/nike-yellow.png";
 
 export default function PurchaseDonePage() {
@@ -14,7 +14,7 @@ export default function PurchaseDonePage() {
                 <div className="lg:w-[60%]">
                     <div>
                         <div className="px-5 pt-10 h-auto flex gap-2 flex-col justify-center items-center bg-white rounded-md shadow-sm m-auto">
-                            <h1 className="pb-6 text-center text-3xl font-bold text-dark-gray"><span className="flex justify-center pb-3"><img src={nikeG} alt="confetti emoji" className="h-[74px]" /></span>Compra Realizada<br/> com sucesso!</h1>
+                            <h1 className="pb-6 text-center text-3xl font-bold text-dark-gray"><span className="flex justify-center pb-3"><img src={confetti} alt="confetti emoji" className="h-[74px]" /></span>Compra Realizada<br/> com sucesso!</h1>
                             <hr className=' my-3 bg-light-gray-2'></hr>  
                             <h1 className="text-sm font-bold text-dark-gray-2">Informações Pessoais</h1>  
                             <p className="font-medium text-sm text-drak-gray"><span className="text-light-gray">Nome: </span>Francisco Antonio Ferreira</p>
