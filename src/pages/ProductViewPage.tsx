@@ -37,7 +37,7 @@ export default function ProductViewPage() {
 
     const handleClick = () => {
         window.scrollTo(0, 0);
-        navigate("/products");
+        navigate("/product");
     }
 
     return(

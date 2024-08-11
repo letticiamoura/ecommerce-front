@@ -126,7 +126,7 @@ export default function HomePage() {
 
                 </section>
 
-                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos", href: "https://letticiamoura.github.io/ecommerce-front/product"}}>
+                <Section className="w-full pt-14 pb-20 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos"}}>
                     <ProductListing len={8} />
                 </Section>   
 
