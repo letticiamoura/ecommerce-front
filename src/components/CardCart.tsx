@@ -63,19 +63,19 @@ export default function CartCard({
                         />
                         <button className="h-8 w-8 border border-light-gray-2 rounded-sm" onClick={increaseItem}>+</button>
                     </div>
-                    <div className="flex flex-col lg:flex-row lg:justify-between w-full ">
-                        <div className="mb-2 lg:mb-0">
+                    <div className="flex md:hidden flex-col lg:justify-between w-full ">
+                        <div className="mb-2 lg:mb-0 flex justify-between">
                             <p className="text-base font-bold text-dark-gray-2">UNITÁRIO</p>
                             <p className="text-base font-bold text-dark-gray-2">R$ {price}</p>
                         </div>
                         {total && (
-                            <div>
-                                <p className="text-base font-bold text-dark-gray-2">TOTAL</p>
-                                <p className="text-base font-bold text-dark-gray-2">R$ {total}</p>
+                            <div className='flex justify-between'>
+                                <p className="text-xl font-bold text-dark-gray-2">TOTAL</p>
+                                <p className="text-xl font-extrabold text-primary">R$ {total}</p>
                             </div>
                         )}
                     </div>
-                    <button className="text-xs text-dark-gray-2 underline mt-2" onClick={decreaseItem}>Remover item</button>
+                    <button className="text-xs md:flex md:justify-end md:w-full hover:font-bold text-red-500 hover:text-red-600 transition-colors underline mt-2" onClick={decreaseItem}>Remover item</button>
                 </div>
             )}
             {!showCounter && price && total && (
