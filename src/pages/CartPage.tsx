@@ -11,7 +11,7 @@ export default function CartPage() {
 
     const handleClick = () => {
         window.scrollTo(0, 0);
-        navigate("/product");
+        navigate("/products");
     }
 
     return(
@@ -21,11 +21,6 @@ export default function CartPage() {
                     <div className="px-6 py-7 bg-white">
                         <div className="flex">
                             <h1 className="w-full font-bold font-sm text-dark-gray-2">MEU CARRINHO</h1>
-                            <span className="flex w-full justify-end gap-9">
-                                <h1 className="hidden lg:block font-medium font-sm text-dark-gray-2">QUANTIDADE</h1>
-                                <h1 className="hidden lg:block font-medium font-sm text-dark-gray-2">UNITÁRIO</h1>
-                                <h1 className="hidden lg:block font-medium font-sm text-dark-gray-2">TOTAL</h1>
-                            </span>
                         </div>
                         <CartCard 
                             image={nikeG} 
@@ -47,9 +42,9 @@ export default function CartPage() {
                                 id="pesquisar"
                                 type="text"
                                 placeholder="Insira seu código"
-                                className="w-full lg:w-[270px] h-[60px] p-2 rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
+                                className="w-full lg:w-[270px] p-2 rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
                                 />
-                                <button className="w-full lg:w-28 h-[60px] bg-light-gray-3 hover:bg-primary text-primary hover:text-white font-bold text-sm">OK</button>
+                                <button className="w-full lg:w-28 p-2 rounded-md bg-light-gray-3 hover:bg-primary text-primary hover:text-white font-bold text-sm">OK</button>
                             </div>
                         </div>
                         <div className="mt-3 lg:m-0 p-7 lg:p-0 bg-white">
@@ -59,14 +54,14 @@ export default function CartPage() {
                                 id="pesquisar"
                                 type="text"
                                 placeholder="Insira seu código"
-                                className="w-full lg:w-[270px] h-[60px] p-2  rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
+                                className="w-full lg:w-[270px] p-2  rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
                                 />
-                                <button className="w-full lg:w-28 h-[60px] bg-light-gray-3 hover:bg-primary text-primary hover:text-white font-bold text-sm">OK</button>
+                                <button className="w-full lg:w-28 p-2 rounded-md bg-light-gray-3 hover:bg-primary text-primary hover:text-white font-bold text-sm">OK</button>
                             </div>
                         </div>
                     </div>
                     <div onClick={handleClick}>
-                        <Section className="hidden lg:block pt-16 pb-32 px-28" title="Produtos Relacionados" link={{text:"Ver todos"}}>
+                        <Section className="hidden lg:block pt-16 pb-32 px-10" title="Produtos Relacionados" link={{text:"Ver todos"}}>
                             <ProductListing len={4} />
                         </Section> 
                     </div>
