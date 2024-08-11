@@ -7,7 +7,7 @@ export default function RegisterForm() {
     const navigate = useNavigate();
 
     const handleRegister = () => {
-        navigate("/home");
+        navigate("/");
         window.scrollTo(0, 0);
     }
     return(

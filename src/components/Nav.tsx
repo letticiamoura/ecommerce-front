@@ -31,7 +31,7 @@ export default function Nav({className}: IClassStyle) {
                 </NavLink>
 
                 <NavLink
-                    to="/products"
+                    to="/products/"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold underline text-lg underline-offset-8 scale-110 transition-all ' : 'text-dark-gray  hover:underline hover:underline-offset-8 font-medium hover:scale-105 text-lg hover:text-primary transition-colors'
                     }
@@ -40,7 +40,7 @@ export default function Nav({className}: IClassStyle) {
                 </NavLink>
 
                 <NavLink
-                    to="/construction"
+                    to="/construction/"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold underline text-lg underline-offset-8 scale-110 transition-all ' : 'text-dark-gray hover:underline hover:underline-offset-8 font-medium hover:scale-105 text-lg md:text-lg hover:text-primary transition-colors'
                     }
@@ -49,7 +49,7 @@ export default function Nav({className}: IClassStyle) {
                 </NavLink>
 
                 <NavLink
-                    to="/myproducts"
+                    to="/myproducts/"
                     className={({ isActive }) =>
                     isActive ? 'text-primary font-bold underline text-lg underline-offset-8 scale-110 transition-all ' : 'text-dark-gray hover:underline hover:underline-offset-8 font-medium hover:scale-105 text-lg md:text-lg hover:text-primary transition-colors'
                     }
