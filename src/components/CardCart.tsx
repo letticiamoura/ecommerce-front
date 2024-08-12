@@ -26,7 +26,7 @@ export default function CartCard({className, image, title, color, size, quantity
         setCount(isNaN(newValue) ? 0 : newValue);
     };
     return(
-        <div className={`${className} lg:flex lg:flex-col`}>
+        <div className={`${className} lg:flex flex-col`}>
             {color && size && price && <hr className='my-5 bg-light-gray-2'></hr> }
                 <div className="flex flex-col lg:flex-row justify-between">
                     <div className="flex">
