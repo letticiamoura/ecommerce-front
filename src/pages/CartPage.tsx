@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Layout from "./Layout";
 import Section from "../components/Section";
 import ProductListing from "../components/ProductListing";
