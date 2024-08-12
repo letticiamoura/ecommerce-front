@@ -7,6 +7,7 @@ import { CiFilter } from "react-icons/ci";
 import { useState } from "react";
 
 export default function ProductPage() {
+    
     const [filter, setFilter] = useState(false);
 
     const handleFilter = () => setFilter(!filter);
@@ -16,7 +17,7 @@ export default function ProductPage() {
             <Section className="bg-light-gray-3 pt-20 md:pt-0">
                 <div className="flex flex-col-reverse md:flex-row w-full justify-between items-center px-10 py-5 md:py-14">
                     <p className="text-base text-dark-gray-2 py-3">
-                        <span className="font-bold">Resultados para "Tênis" -</span> 389 produtos
+                        <span className="font-bold">Resultados para "Tênis"</span>
                     </p>
                     <div className="flex items-center gap-2 sm:gap-80">
                         <FilterProduct />

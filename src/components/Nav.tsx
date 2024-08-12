@@ -15,7 +15,7 @@ export default function Nav({className}: IClassStyle) {
 
         <nav className={className}>
 
-            <ul className="py-5 px-3 md:px-11 flex flex-col md:flex-row gap-5 md:gap-10 items-start justify-start font-thin">
+            <ul className="pt-4 py-2 px-3 md:px-11 flex flex-col md:flex-row gap-5 md:gap-10 items-start justify-start font-thin">
 
                 <p className="text-2xl font-medium text-dark-gray md:hidden">Páginas</p>
 

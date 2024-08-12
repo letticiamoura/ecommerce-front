@@ -87,7 +87,7 @@ const BuyBox = ({ name, reference, stars, rating, price, priceDiscount, descript
                 </div>
             </div>
 
-            <button className="w-full md:w-2/4 font-medium text-xl bg-warning hover:bg-amber-500 text-white py-3 rounded-md hover:scale-105 transition-all duration-200">
+            <button className="w-full md:w-2/4 font-medium text-xl bg-warning hover:bg-amber-500 text-white p-2 rounded-md hover:scale-105 transition-all duration-200">
                 Comprar
             </button>
         </div>
