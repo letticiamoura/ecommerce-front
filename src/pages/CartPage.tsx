@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Layout from "./Layout";
 import CartCard from "../components/CardCart";
 import Section from "../components/Section";
