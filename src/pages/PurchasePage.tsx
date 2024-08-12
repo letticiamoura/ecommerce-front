@@ -8,7 +8,7 @@ export default function PurchasePage() {
 
     return(
         <Layout>
-            <div className="flex flex-col lg:flex-row lg:gap-4 justify-center pt-28 lg:pt-14 px-5 lg:px-0">
+            <div className="flex flex-col lg:flex-row lg:gap-4 bg-light-gray-3 justify-center pt-28 lg:pt-14 px-5 lg:px-0">
                 <div className="lg:w-[60%]">
                     <div>
                         <h1 className="pb-3 md:text-start text-2xl font-bold">Finalizar Compra</h1>
