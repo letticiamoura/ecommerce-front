@@ -42,9 +42,9 @@ export default function CartPage() {
                                 id="pesquisar"
                                 type="text"
                                 placeholder="Insira seu código"
-                                className="w-full lg:w-[270px] h-[60px] p-2 rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
+                                className="w-full lg:w-[270px] p-3 rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
                                 />
-                                <button className="w-full lg:w-28 h-[60px] bg-light-gray-3 hover:bg-primary text-primary hover:text-white font-bold text-sm">OK</button>
+                                <button className="w-full lg:w-28 p-3 rounded-md bg-light-gray-3 hover:bg-primary text-primary hover:text-white font-bold text-sm">OK</button>
                             </div>
                         </div>
                         <div className="mt-3 lg:m-0 p-7 lg:p-0 bg-white">
@@ -54,9 +54,9 @@ export default function CartPage() {
                                 id="pesquisar"
                                 type="text"
                                 placeholder="Insira seu código"
-                                className="w-full lg:w-[270px] h-[60px] p-2  rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
+                                className="w-full lg:w-[270px] p-3  rounded-md bg-light-gray-3 outline-none focus:border-pink-600 focus:ring-pink-600 focus:ring-2"
                                 />
-                                <button className="w-full lg:w-28 h-[60px] bg-light-gray-3 hover:bg-primary text-primary hover:text-white font-bold text-sm">OK</button>
+                                <button className="w-full lg:w-28 p-3 rounded-md bg-light-gray-3 hover:bg-primary text-primary hover:text-white font-bold text-sm">OK</button>
                             </div>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ export default function CartPage() {
                         <NavLink to="/purchasepage" className="hidden lg:block w-full py-2 px-2 bg-warning text-white rounded-md text-center">Continuar</NavLink>
                 </div>
             </div>
-            <div className="lg:hidden h-fit px-6 py-7 mt-28 bg-white">
+            <div className="lg:hidden h-fit px-6 py-7 mt-5 bg-light-gray-3">
                     <p className="flex justify-between text-sm font-bold text-dark-gray-2">Total: <span className="text-error">R$ 219.00</span></p>
                     <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
                     <NavLink to="/purchasepage" className="block lg:hidden w-full py-2 px-2 bg-warning text-white rounded-md text-center">Continuar</NavLink>

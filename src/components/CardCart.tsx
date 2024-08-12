@@ -52,7 +52,7 @@ export default function CartCard({className, image, title, color, size, quantity
                                     />
                                     <button className="h-9 w-[85px] lg:w-9 border border-light-gray-2 rounded-sm" onClick={increaseItem}>+</button>
                                 </div>
-                                <button className='text-xs text-dark-gray-2 underline' onClick={decreaseItem}>Remover item</button>
+                                <button className='text-md hover:font-bold text-red-600 underline' onClick={decreaseItem}>Remover item</button>
                         </div>
                         <span className="flex justify-between w-full">
                             <h1 className="block lg:hidden font-medium font-sm text-dark-gray-2">UNITÁRIO</h1>
