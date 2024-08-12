@@ -74,7 +74,7 @@ export default function PurchasePage() {
                         <hr className='my-3 bg-light-gray-2'></hr>   
                         <p className="flex justify-between text-sm font-bold text-dark-gray-2">Total: <span className="text-error">R$ 219.00</span></p>
                         <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
-                        <NavLink to="/ecommerce-front/purchasedone" className=" w-full py-2 px-2 bg-warning text-white rounded-md text-center">Realizar Pagamento</NavLink>
+                        <NavLink to="/purchasedone" className=" w-full py-2 px-2 bg-warning text-white rounded-md text-center">Realizar Pagamento</NavLink>
                     </div>
                 </div>
                 <div className="lg:w-[30%] h-fit px-6 py-7 mt-5 lg:mt-14 bg-white">
@@ -100,7 +100,7 @@ export default function PurchasePage() {
             <div className="flex lg:hidden flex-col lg:w-full h-fit px-6 py-3 mt-10 bg-white">
                 <p className="flex justify-between text-lg font-bold text-dark-gray">Total: <span className="text-error">R$ 219.00</span></p>
                 <p className="pt-1 pb-5 text-xs text-light-gray text-end">ou 10x de R$ 21,00 sem juros</p>
-                <NavLink to="/purchasepage" className=" w-full py-2 px-2 bg-warning text-white rounded-md text-center">Realizar Pagamento</NavLink>
+                <NavLink to="/purchasedone" className=" w-full py-2 px-2 bg-warning text-white rounded-md text-center">Realizar Pagamento</NavLink>
             </div>                           
         </Layout>
     );

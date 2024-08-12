@@ -7,12 +7,7 @@ import CartCard from "../components/CardCart";
 
 export default function CartPage() {
 
-    const navigate = useNavigate();
-
-    const handleClick = () => {
-        window.scrollTo(0, 0);
-        navigate("/products");
-    }
+    const handleClick = () => window.scrollTo(0, 0);
 
     return(
         <Layout>
@@ -66,7 +61,7 @@ export default function CartPage() {
                         </Section> 
                     </div>
                 </div>
-                <div className="lg:w-1/4 h-fit px-6 py-7 mt-3 lg:m-0 bg-light-gray-3">
+                <div className="lg:w-1/4 h-fit px-6 py-7 mt-3 lg:m-0 bg-white">
                         <h1 className="w-full font-bold font-sm text-dark-gray-2">RESUMO</h1>
                         <hr className='my-5 bg-light-gray-2 h-auto'></hr> 
                         <div className="flex flex-col gap-4">

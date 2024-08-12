@@ -8,13 +8,15 @@ interface LogoProps {
 
 export default function Logo({ type }:LogoProps)  {
 
+    const handleClick = () => window.scrollTo(0, 0);
+
     const logoSrc = type === 'logoHeader' ? logoHeader : logoFooter;
 
     return (
 
         <div>
 
-            <Link to="/">
+            <Link to="/" onClick={handleClick}>
                 <img src={logoSrc} alt="Logo" className='h-auto w-[40vw] md:w-[20vw]' />
             </Link>
 
