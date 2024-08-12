@@ -28,7 +28,7 @@ export default function CartCard({className, image, title, color, size, quantity
     return(
         <div className={`${className} lg:flex lg:flex-col`}>
             {color && size && price && <hr className='my-5 bg-light-gray-2'></hr> }
-                <div className="flex justify-between">
+                <div className="flex flex-col lg:flex-row justify-between">
                     <div className="flex">
                         <img className="h-[104px] w-[127px] mr-5 box-border object-contain bg-light-blue" src={image} alt={title} />
                         <span>
@@ -39,8 +39,8 @@ export default function CartCard({className, image, title, color, size, quantity
                         </span>
                     </div>
                     {showCounter &&
-                    <div className="flex flex-col lg:flex-row items-center gap-9">
-                        <div className="flex flex-col items-center lg:pr-2">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-7 lg:gap-9">
+                        <div className="flex flex-col items-center lg:pr-2 pt-5 lg:pt-0">
                             <h1 className="block lg:hidden font-medium font-sm self-start pb-3 text-dark-gray-2">QUANTIDADE</h1>
                                 <div className="flex items-center pb-2">
                                     <button className="h-9 w-[85px] lg:w-9 border border-light-gray-2 rounded-sm" onClick={decreaseItem}>-</button>

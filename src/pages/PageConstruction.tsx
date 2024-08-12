@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import page from "../assets/page.gif";
+import page from "../assets/page-gray.gif";
 import Layout from "./Layout";
 import { useEffect } from "react";
 
