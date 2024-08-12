@@ -1,22 +1,18 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Layout from "./Layout";
 import CartCard from "../components/CardCart";
 import Section from "../components/Section";
 import ProductListing from "../components/ProductListing";
 import nikeG from "../assets/products/nike-yellow.png";
-    
-    export default function CartPage() {
 
-        const navigate = useNavigate();
-    
-        const handleClick = () => {
-            window.scrollTo(0, 0);
-            navigate("/products");
-        }
-        return(
-            <Layout>
-            <div className="flex flex-col lg:flex-row lg:gap-4 justify-center pt-32 lg:pt-14 px-5 lg:px-0">
-                <div className="lg:w-4/6">
+export default function CartPage() {
+
+    const handleClick = () => window.scrollTo(0, 0);
+
+    return(
+        <Layout>
+            <div className="flex flex-col lg:flex-row lg:gap-4 justify-center pt-32 lg:pt-14 px-5 lg:px-0 bg-light-gray-3">
+                <div className="lg:w-4/6 flex flex-col">
                     <div className="px-6 py-7 bg-white">
                         <div className="flex">
                             <h1 className="w-full font-bold font-sm text-dark-gray-2">MEU CARRINHO</h1>

@@ -18,9 +18,9 @@ interface Product {
 }
 
 const products: Product[] = [
-    { category: "Tênis", name: "K-swiss V8 - Masculino", image: nikeG, price: 49.9, priceDiscount: 20 },
-    { category: "Tênis", name: "Nike - Feminino", image: nikeBlue, price: 50.9, priceDiscount: 20 },
-    { category: "Tênis", name: "Puma - Masculino", image: nikeB, price: 50.9, priceDiscount: 20 }
+    { category: "Tênis", name: "Tênis K-swiss V8 - Masculino", image: nikeG, price: 49.9, priceDiscount: 20 },
+    { category: "Tênis", name: "Tenis Nike - Feminino", image: nikeBlue, price: 50.9, priceDiscount: 20 },
+    { category: "Tênis", name: "Tênis Puma - Masculino", image: nikeB, price: 50.9, priceDiscount: 20 }
 ];
 
 export default function ProductListing({ len }: IProductListingProps) {
