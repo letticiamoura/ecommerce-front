@@ -1,4 +1,5 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&height=100&color=C92071&reversal=true" />
+<h1> 🚀 E-commerce Responsivo - Geração Tech</h1>
 
 # [🚀 E-commerce Responsivo - Geração Tech](https://letticiamoura.github.io/ecommerce-front/) 
 
@@ -16,6 +17,7 @@
 ## 🎲 Rodando o Front end
 
 ##### Clonar o repositório
+
 ```
 git clone https://github.com/letticiamoura/ecommerce-front.git
 ```
@@ -28,6 +30,10 @@ cd ecommerce-front
 ##### Instalar dependências
 ```
 npm i
+```
+
+```
+npm install
 ```
 
 ##### Inicializando projeto
