@@ -33,13 +33,7 @@ export default function ProductViewPage() {
         { id: 4, color: "bg-purple-500" }
     ];
 
-    const navigate = useNavigate();
-
-    const handleClick = () => {
-        window.scrollTo(0, 0);
-        navigate("/product");
-    }
-
+    const handleClick = () => window.scrollTo(0, 0);
     return(
             <Layout>
 
@@ -107,13 +101,13 @@ export default function ProductViewPage() {
                     </div>
 
                     <div onClick={handleClick}>
-                        <Section className="w-full pt-10 pb-5 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos"}}>
-                            <div className="hidden md:flex">
-                                <ProductListing len={4} />
-                            </div>
-                            <div className="md:hidden">
-                                <ProductListing len={2} />
-                            </div>
+                        <Section className="w-full pt-10 pb-5 px-2 box-border" title="Produtos em alta" link={{text:"Ver todos"}}>=
+                                <div className="hidden md:flex">
+                                    <ProductListing len={4} />
+                                </div>
+                                <div className="md:hidden">
+                                    <ProductListing len={2} />
+                                </div>
                         </Section>
                     </div>
 
